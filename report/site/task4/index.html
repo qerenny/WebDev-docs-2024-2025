@@ -1,0 +1,377 @@
+<!doctype html>
+<html>
+    <head>
+                <title>Task 4 - just_place</title>
+
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            
+            
+            
+
+            
+                <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+            
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                        <script>hljs.initHighlightingOnLoad();</script>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../assets/css/main.min.css">
+                <script src="../search/main.js"></script>
+
+            
+                
+            
+    </head>
+
+    <body>
+        <div class="container py-3">
+            <header>
+                    <!-- block header -->
+<nav class="navbar navbar-expand-xl border-bottom">
+    <div class="container-fluid">
+        
+
+        
+            <span class=" fs-4 title-color site-name" id="component-site-name" style="text-transform: uppercase;">just_place</span>
+        
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+            aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+            <ul class="navbar-nav">
+
+                <!-- block menu -->
+                <li class="nav-item">
+                    <!-- block menu -->
+    
+        <li class="nav-item" id="component-menu">
+            <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="..">[Home]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../task1/">[Task 1]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../task2/">[Task 2]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../task3/">[Task 3]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class=" active 
+                            nav-link text-gray text-decoration-none" href="./">[Task 4]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../task5/">[Task 5]</a>
+                        </li>
+            </ul>
+        </li>
+<!-- endblock -->
+                </li>
+                <!-- endblock -->
+
+                <!-- block search -->
+                <li class="nav-item">
+                    <a class="collapsed" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <div class="md-search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <!--  endblock -->
+
+                <!-- block source -->
+                <li class="nav-item">
+                    
+                </li>
+                <!--  endblock -->
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--  endblock -->
+            </header>
+
+            <main><!-- block search -->
+<div class="collapse" id="collapseExample">
+    <div role="search" class="search-box">
+        <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+            <input type="text" name="q" class="search-query"
+            placeholder="Search docs" title="Type search term here" />
+        </form>
+    </div>
+</div>
+<!-- endblock -->
+                    <!-- block content -->
+<section class="container post">
+    <article>
+        <header>
+            
+                <h1 class=" title" id="component-title">Task 4</h1>
+            
+        </header>
+        <p><h1 id="_1">Реализация многопользовательского чата</h1>
+<h2 id="_2">Условие</h2>
+<p><strong>Задача</strong>: Реализовать многопользовательский чат, где клиенты могут подключаться к серверу, отправлять сообщения и получать их от других пользователей. Для реализации требуется использование библиотеки <code>socket</code> для сетевых операций и библиотеки <code>threading</code> для работы с потоками.</p>
+<p><strong>Требования</strong>:</p>
+<ol>
+<li>Многопользовательская поддержка (больше двух пользователей).</li>
+<li>Использование потоков для обработки сообщений от разных пользователей.</li>
+<li>Отправка сообщений от одного пользователя всем остальным участникам чата.</li>
+</ol>
+<h2 id="_3">Решение</h2>
+<p>В данной задаче реализован многопользовательский чат с серверной и клиентской частью.</p>
+<ul>
+<li><strong>Серверная часть</strong> отвечает за обработку подключений пользователей, отправку и получение сообщений, а также за рассылку сообщений другим участникам чата. Сервер управляет потоками для каждого пользователя и сохраняет информацию о подключённых клиентах.</li>
+<li><strong>Клиентская часть</strong> позволяет пользователям подключаться к серверу, отправлять и получать сообщения.</li>
+</ul>
+<h3 id="_4">Возможности:</h3>
+<ol>
+<li><strong>Использование библиотеки <code>socket</code></strong>: Все взаимодействие между сервером и клиентами осуществляется с помощью TCP-сокетов, которые позволяют отправлять и получать сообщения в текстовом формате.</li>
+<li><strong>Использование <code>threading</code></strong>: Каждое клиентское соединение на стороне сервера обрабатывается в отдельном потоке, что позволяет обрабатывать сообщения от нескольких клиентов параллельно.</li>
+<li><strong>Многопользовательский режим</strong>: Сервер поддерживает подключение и взаимодействие между несколькими пользователями одновременно. Все подключенные пользователи сохраняются в словаре <code>users</code>, где ключом является имя пользователя, а значением — сокет клиента.</li>
+<li><strong>Персональные сообщения</strong>: Пользователи могут отправлять приватные сообщения другим пользователям, добавив символ <code>@</code> перед именем целевого пользователя.</li>
+</ol>
+<h3 id="_5">Описание работы функций</h3>
+<ol>
+<li><strong>Функция <code>broadcast</code></strong>:</li>
+</ol>
+<blockquote>
+<p>Отвечает за отправку сообщений всем пользователям, за исключением отправителя.
+Если сообщение отправляется конкретному пользователю, то проверяется наличие этого пользователя в системе, и если он подключен, сообщение доставляется только ему.</p>
+</blockquote>
+<ol>
+<li><strong>Функция <code>handle_client</code></strong>:</li>
+</ol>
+<blockquote>
+<p>Управляет взаимодействием с клиентом. После подключения клиента, запрашивается его имя, которое используется для идентификации в чате.
+Функция обрабатывает все входящие сообщения клиента и передает их через <code>broadcast</code> другим пользователям.
+Также поддерживает отправку персональных сообщений через символ <code>@</code>.</p>
+</blockquote>
+<ol>
+<li><strong>Функция <code>start_server</code></strong>:</li>
+</ol>
+<blockquote>
+<p>Основная функция сервера, которая ожидает подключения клиентов и запускает отдельный поток для каждого нового клиента с помощью <code>threading.Thread</code>.</p>
+</blockquote>
+<ol>
+<li><strong>Функция <code>receive_messages</code> (на стороне клиента)</strong>:</li>
+</ol>
+<blockquote>
+<p>Поток на стороне клиента, который принимает входящие сообщения от сервера и выводит их на экран.</p>
+</blockquote>
+<ol>
+<li><strong>Функция <code>start_client</code></strong>:</li>
+</ol>
+<blockquote>
+<p>Основная функция клиента, которая подключается к серверу и запускает поток для приема сообщений, одновременно позволяя пользователю вводить свои собственные сообщения.</p>
+</blockquote>
+<h3 id="_6">Пример работы чата</h3>
+<ol>
+<li><strong>Подключение клиента</strong>:</li>
+</ol>
+<blockquote>
+<p>Клиент подключается к серверу и вводит свое имя. Если имя уже занято, подключение прерывается.
+Если имя уникально, клиент присоединяется к чату, и всем другим пользователям отправляется сообщение о новом участнике.</p>
+</blockquote>
+<ol>
+<li><strong>Отправка сообщений</strong>:</li>
+</ol>
+<blockquote>
+<p>Клиент может отправлять обычные сообщения, которые видят все участники чата, или персональные сообщения, указав <code>@user_name</code> в начале сообщения.</p>
+</blockquote>
+<ol>
+<li><strong>Отключение клиента</strong>:</li>
+</ol>
+<blockquote>
+<p>Если клиент закрывает соединение или происходит ошибка, сервер отключает его и уведомляет остальных участников чата.</p>
+</blockquote>
+<h2 id="_7">Код</h2>
+<p><code>server.py</code></p>
+<pre><code class="language-python">import socket
+import threading
+
+green_s = '\033[32m'
+red_s = '\033[31m'
+green_e = '\033[0m'
+red_e = '\033[0m'
+users = {}
+
+
+def broadcast(message, sender_socket=None, target_user=None):
+    if target_user:
+        target_socket = users.get(target_user)
+        if target_socket:
+            try:
+                target_socket.send(message)
+            except:
+                target_socket.close()
+                del users[target_user]
+                print(f&quot;{red_s}Ошибка при отправке сообщения пользователю {target_user}{red_e}&quot;)
+        else:
+            print(f&quot;{red_s}Пользователь {target_user} не найден{red_e}&quot;)
+            sender_socket.send(f&quot;{red_s}Ошибка: Пользователь {target_user} не найден{red_e}&quot;.encode('utf-8'))
+        return
+
+    for user, client_socket in users.items():
+        if client_socket != sender_socket:
+            try:
+                client_socket.send(message)
+            except:
+                client_socket.close()
+                del users[user]
+
+
+def handle_client(client_socket, client_address):
+    print(f&quot;Новое подключение: {client_address}&quot;)
+
+    client_socket.send(&quot;Введите своё имя: &quot;.encode('utf-8'))
+    user_name = client_socket.recv(1024).decode('utf-8')
+    if user_name in users:
+        client_socket.send(&quot;Имя уже занято, подключение прервано.\n&quot;.encode('utf-8'))
+        client_socket.close()
+        return
+    users[user_name] = client_socket
+
+    broadcast(f&quot;{green_s}{user_name} присоединился к чату.{green_e}&quot;.encode('utf-8'), client_socket)
+
+    while True:
+        try:
+            message = client_socket.recv(1024)
+            if not message:
+                break
+            print(f&quot;{user_name}: {message.decode('utf-8')}&quot;)
+
+            if message.decode('utf-8').startswith(&quot;@&quot;):
+                target_user, personal_message = message.decode('utf-8').split(' ', 1)
+                target_user = target_user[1:]
+                broadcast(
+                    f&quot;{user_name} {green_s}(лично для {target_user}){green_e}: {personal_message}&quot;.encode('utf-8'),
+                    client_socket, target_user=target_user)
+            else:
+                broadcast(f&quot;{user_name}: {message.decode('utf-8')}&quot;.encode('utf-8'), client_socket)
+        except:
+            client_socket.close()
+            del users[user_name]
+            broadcast(f&quot;{red_s}{user_name} покинул чат.{red_e}&quot;.encode('utf-8'))
+            break
+
+
+def start_server():
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server_socket.bind(('127.0.0.1', 1234))
+    server_socket.listen()
+
+    while True:
+        client_socket, client_address = server_socket.accept()
+
+        client_thread = threading.Thread(target=handle_client, args=(client_socket, client_address))
+        client_thread.start()
+
+
+start_server()
+</code></pre>
+<p><code>client*.py</code></p>
+<pre><code class="language-python">import socket
+import threading
+
+
+def receive_messages(client_socket):
+    while True:
+        try:
+            message = client_socket.recv(1024).decode('utf-8')
+            if message:
+                print(message)
+            else:
+                break
+        except:
+            print(&quot;Ошибка&quot;)
+            client_socket.close()
+            break
+
+
+def start_client():
+    client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    client_socket.connect(('127.0.0.1', 1234))
+
+    receive_thread = threading.Thread(target=receive_messages, args=(client_socket,))
+    receive_thread.start()
+
+    while True:
+        message = input()
+        if message.lower() == 'exit':
+            break
+        client_socket.send(message.encode('utf-8'))
+
+    client_socket.close()
+
+
+start_client()
+</code></pre></p>
+    </article>
+</section>
+<!-- endblock -->
+            </main>
+
+            
+                    <!-- block preview -->
+        <div class="row row-cols-md-3 text-center pt-md-3" id="component-preview">
+            <div class="col themed-grid-col">
+                <a rel="prev" href="../task3/" class="nav-link">
+                    <i class="fa fa-arrow-left"></i> Previous
+                </a>
+            </div>
+            <div class="col themed-grid-col"></div>
+            <div class="col themed-grid-col">
+                <a rel="next" href="../task5/" class="nav-link">
+                    Next <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+<!-- endblock -->
+            
+
+            
+                    <!-- block footer -->
+<footer class="pt-4 my-md-5 pt-md-5 border-top" id="component-footer">
+    <div class="row">
+        <div class="col-12 col-md">
+                <!-- block copyright -->
+
+    <small class="d-block mb-3">
+        Made with
+        <a href="https://github.com/FernandoCelmer/mkdocs-simple-blog" target="_blank" rel="noopener">
+            Simple Blog for MkDocs
+        </a>
+    </small>
+
+<!-- endblock -->
+        </div>
+    </div>
+</footer>
+<!-- endblock -->
+            
+        </div>
+
+            <script>var base_url = '..';</script>
+            <script src="../assets/js/jquery-3.3.1.slim.min.js""></script>
+            <script src="../assets/js/bootstrap.bundle.min.js""></script>
+            <script src="../assets/js/main.min.js""></script>
+                <script src="../search/main.js" defer></script>
+
+    </body>
+
+</html>
