@@ -16,8 +16,9 @@ jobs:
           python-version: 3.x
       - uses: actions/cache@v3
         with:
-          key: ${{ github.ref }}
-          path: .cache
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          path: ~/.cache/pip
+      - run: rm -rf ./docs/_site || true
       - run: pip install mkdocs
       - run: pip install mkdocs mkdocs-simple-blog
       - run: mkdocs gh-deploy --force
