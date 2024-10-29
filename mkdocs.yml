@@ -1,11 +1,13 @@
 site_name: just_place
 nav:
   - Home: index.md
-  - Task 1: task1.md
-  - Task 2: task2.md
-  - Task 3: task3.md
-  - Task 4: task4.md
-  - Task 5: task5.md
+  - Lab 1:
+    - Task 1: Lab1/task1.md
+    - Task 2: Lab1/task2.md
+    - Task 3: Lab1/task3.md
+    - Task 4: Lab1/task4.md
+    - Task 5: Lab1/task5.md
+  - Lab 2: Lab2/Lab2_task/Task.md
 
 
 theme:
