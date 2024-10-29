@@ -18,6 +18,6 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
+      - run: pip install mkdocs
       - run: pip install mkdocs mkdocs-simple-blog
-      - run: echo "" > docs/.nojekyll
       - run: mkdocs gh-deploy --force
