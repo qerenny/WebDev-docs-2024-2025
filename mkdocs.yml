@@ -8,6 +8,14 @@ nav:
     - Task 4: Lab1/task4.md
     - Task 5: Lab1/task5.md
   - Lab 2: Lab2/Lab2_task/Task.md
+  - Lab 3: 
+    - Clients: Lab3/clients.md
+    - Staff: Lab3/staff.md
+    - Stays: Lab3/stays.md
+    - Rooms: Lab3/rooms.md
+    - Schedules: Lab3/schedules.md
+    - Executions: Lab3/executions.md
+    - Reports: Lab3/reports.md
 
 
 theme:
