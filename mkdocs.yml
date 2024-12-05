@@ -15,7 +15,7 @@ nav:
     - Rooms: Lab3/rooms.md
     - Schedules: Lab3/schedules.md
     - Executions: Lab3/executions.md
-    - Reports: Lab3/reports.md
+    - Report: Lab3/report.md
 
 
 theme:
