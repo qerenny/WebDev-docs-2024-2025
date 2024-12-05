@@ -48,7 +48,7 @@ Authorization: Token your_auth_token
 
 - **URL:** `/clients/`
 - **Method:** `POST`
-- **Auth required:** `NO`
+- **Auth required:** `YES`
 - **Permission required:** `None`
 
 **Тело запроса:**
@@ -121,7 +121,7 @@ Authorization: Token your_auth_token
 
 - **URL:** `/clients/{client_id}/`
 - **Method:** `PUT` или `PATCH`
-- **Auth required:** `NO`
+- **Auth required:** `YES`
 - **Permission required:** `None`
 
 **Тело запроса:**
@@ -156,7 +156,7 @@ Authorization: Token your_auth_token
 
 - **URL:** `/clients/{client_id}/`
 - **Method:** `DELETE`
-- **Auth required:** `NO`
+- **Auth required:** `YES`
 - **Permission required:** `None`
 
 **Успешный ответ:**
