@@ -365,7 +365,6 @@ owners_with_license = CarOwner.objects.filter(driver_license__isnull=False).dist
 for owner in owners_with_license:
     license_issue_date = owner.driver_license.first().issue_date.date()
     print(f"{owner.first_name} {owner.last_name}, дата выдачи удостоверения: {license_issue_date}")
-
 ```
 
 **Результат:**
@@ -376,4 +375,3 @@ for owner in owners_with_license:
 Сергей Сергеев, дата выдачи удостоверения: 2010-01-05
 Николай Николаев, дата выдачи удостоверения: 2012-03-18
 Михаил Михайлов, дата выдачи удостоверения: 2015-07-30
-
