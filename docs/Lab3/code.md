@@ -4,13 +4,13 @@
 
 ## Содержание
 1. Структура данных (Модели)
-    - [Room](#модель-room)
-    - [Client](#модель-client)
-    - [Staff](#модель-staff)
-    - [Stay](#модель-stay)
-    - [CleaningSchedule](#модель-cleaningschedule)
-    - [CleaningExecution](#модель-cleaningexecution)
-2. [Сериализаторы](#сериализаторы)
+    - [Room](#room)
+    - [Client](#сlient)
+    - [Staff](#staff)
+    - [Stay](#stay)
+    - [CleaningSchedule](#cleaningschedule)
+    - [CleaningExecution](#cleaningexecution)
+2. Сериализаторы
     - [UserSerializer](#userserializer)
     - [RoomSerializer](#roomserializer)
     - [ClientSerializer](#clientserializer)
@@ -18,7 +18,7 @@
     - [StaySerializer](#stayserializer)
     - [CleaningScheduleSerializer](#cleaningscheduleserializer)
     - [CleaningExecutionSerializer](#cleaningexecutionserializer)
-3. [Вьюсеты и логика API](#вьюсеты-и-api)
+3. Вьюсеты и логика API
     - [RoomViewSet](#roomviewset)
     - [ClientViewSet](#clientviewset)
     - [StaffViewSet](#staffviewset)
@@ -26,11 +26,11 @@
     - [CleaningScheduleViewSet](#cleaningscheduleviewset)
     - [CleaningExecutionViewSet](#cleaningexecutionviewset)
     - [ReportView](#reportview)
-4. [Маршрутизация (URLs)](#маршрутизация)
+4. [Маршрутизация (URLs)](#routes)
 
 ## Модели
 
-### Модель Room
+### Room
 
 Представляет данные о номере гостиницы, включая тип (одноместный, двухместный, трехместный), стоимость за день, контактный телефон, этаж и статус доступности.
 
@@ -69,7 +69,7 @@ class Room(models.Model):
         return f"Номер: {self.room_id} ({self.get_room_type_display()}, Этаж: {self.floor})"
 ```
 
-### Модель Client
+### Client
 
 Отражает данные о клиенте. Связана с моделью пользователя (User) один-к-одному и хранит паспортные данные, ФИО и город прибытия.
 
@@ -119,7 +119,7 @@ class Staff(models.Model):
         return f"{self.last_name} {self.first_name} {self.middle_name}"
 ```
 
-### Модель Stay
+### Stay
 
 Отражает период проживания клиента в конкретном номере. Хранит данные о датах заезда и выезда.
 
@@ -145,7 +145,7 @@ class Stay(models.Model):
         return f"Проживание {self.client} в номере {self.room}"
 ```
 
-### Модель CleaningSchedule
+### CleaningSchedule
 
 Отражает расписание уборки номеров, включая сотрудника, номер (опционально), этаж и время-день недели.
 
@@ -176,7 +176,7 @@ class CleaningSchedule(models.Model):
         return f"Расписание уборки {self.staff} на этаже {self.floor}"
 ```
 
-### Модель CleaningExecution
+### CleaningExecution
 
 Хранит данные о выполненных уборках, включая расписание, сотрудника, время, этаж и номер.
 
@@ -626,7 +626,7 @@ class ReportView(APIView):
         return Response(report)
 ```
 
-### Маршрутизация
+### Routes
 
 Для настройки маршрутов используется DefaultRouter из Django REST Framework. Все основные ресурсы размещены по REST-принципам.
 
