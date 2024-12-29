@@ -2881,34 +2881,8 @@ createApp(App)
 
 ---
 
-
-## NavigationBar.vue
-
-Навигационная панель, отображающаяся на всех страницах после авторизации пользователя.
-
-**Код:**
-
-```vue
-<template>
-  <v-app-bar elevation="8" color="#a5f5f4">
-    <!-- Контент -->
-  </v-app-bar>
-</template>
-
-<script>
-export default {
-  // Логика компонента
-}
-</script>
-```
-
-**Описание:**
-
-- **Data:** `token`, `userData`
-- **Methods:** `fetchUser`, `logout`
 ```
 ```
-#### api.md
 
 # API
 
