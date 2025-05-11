@@ -23,7 +23,9 @@ nav:
     - Prac 3.1: Prac3.1/prac3_1.md
   - Semester 2:
     - Lab 1: Lab1_sem2/lab1.md
+    - Lab 2: Lab2_sem2/lab2.md
 
 
-theme:
-  name: simple-blog
+theme: terminal
+plugins:
+  - md-to-html

@@ -1,4 +1,4 @@
 # Выполнение работы
 
-![Кот](https://www.digitalmomblog.com/wp-content/uploads/2019/02/good-morning-inspiration-meme.jpeg.webp)
+![Кот](https://cdn.fishki.net/upload/post/201405/22/1271219/002.jpg)
 Работу выполнил: **Корчагин Вадим**
