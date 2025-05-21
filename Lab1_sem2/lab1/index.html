@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.7.0">
+     
+     
+    <link rel="icon" type="image/png" sizes="192x192" href="../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>Lab 1 - just_place</title>
+
+
+<link href="../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../css/normalize.css" rel="stylesheet">
+<link href="../../css/terminal.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../css/theme.footer.css" rel="stylesheet">
+<!-- default color palette -->
+<link href="../../css/palettes/default.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="/" class="no-style">just_place</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Home</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                
+                
+                
+                    
+                    
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+  
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../..">Home</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Semester 1</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Lab 1</span>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../Lab2/Lab2_task/Task/">Lab 2</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Lab 3</span>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../Lab4/lab4/">Lab 4</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../Prac3.1/prac3_1/">Prac 3.1</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item--active terminal-mkdocs-side-nav-section-no-index">Semester 2</span>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        <span class="
+
+    terminal-mkdocs-side-nav-item--active">Lab 1</span>
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../Lab2_sem2/lab2/">Lab 2</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../Lab3_sem2/lab3/">Lab 3</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+    </ul>
+  
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#1">Лабораторная работа 1: Сервис управления личными финансами</a></li>
+        <li><a href="#_1">Цель</a></li><li><a href="#_2">Основной функционал</a></li><li><a href="#_3">Структура проекта</a></li><li><a href="#_4">Аутентификация</a></li><li><a href="#_5">Пользователи</a></li><li><a href="#_6">Транзакции</a></li><li><a href="#_7">Счета</a></li><li><a href="#_8">Категории</a></li><li><a href="#_9">Бюджеты</a></li><li><a href="#_10">Цели</a></li><li><a href="#many-to-many">Предпочтения категорий (many-to-many)</a></li><li><a href="#_11">Модели данных</a></li><li><a href="#swagger">Swagger</a></li><li><a href="#_12">Миграции</a></li>
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="1">Лабораторная работа 1: Сервис управления личными финансами</h1>
+<h2 id="_1">Цель</h2>
+<p>Создать веб-приложение, позволяющее пользователям:
+- Управлять доходами и расходами
+- Устанавливать бюджеты на категории
+- Просматривать финансовые отчёты
+- Устанавливать финансовые цели
+- Получать уведомления при превышении бюджета</p>
+<hr />
+<h2 id="_2">Основной функционал</h2>
+<ul>
+<li>Регистрация, авторизация, JWT, смена пароля</li>
+<li>Управление пользователями</li>
+<li>CRUD для транзакций, аккаунтов, целей, категорий, бюджетов</li>
+<li>Вложенные связи one-to-many, many-to-many</li>
+<li>Автоматическая корректировка баланса счёта при транзакции</li>
+<li>Миграции Alembic</li>
+<li>Разделение на модули и схемы Pydantic</li>
+</ul>
+<hr />
+<h2 id="_3">Структура проекта</h2>
+<pre><code class="language-text">app/
+├── core/                  # Аутентификация
+├── db/                   # Подключение к БД
+├── models/               # SQLModel модели
+├── routers/              # FastAPI роутеры
+├── schemas/              # Pydantic-схемы
+main.py                   # Точка входа
+</code></pre>
+<hr />
+<h2 id="_4">Аутентификация</h2>
+<ul>
+<li><code>/auth/register</code> — регистрация</li>
+<li><code>/auth/login</code> — вход</li>
+<li><code>/auth/me</code> — информация о себе</li>
+<li><code>/auth/change-password</code> — смена пароля</li>
+<li>Используется HTTPBearer</li>
+</ul>
+<hr />
+<h2 id="_5">Пользователи</h2>
+<ul>
+<li><code>GET /users/</code> — список</li>
+<li><code>GET /users/{id}</code> — пользователь с вложенными отношениями</li>
+<li><code>PATCH /users/{id}</code> — обновление</li>
+<li><code>DELETE /users/{id}</code> — удаление</li>
+</ul>
+<hr />
+<h2 id="_6">Транзакции</h2>
+<ul>
+<li><code>POST /transactions/</code> — создание</li>
+<li><code>GET /transactions/</code> — список</li>
+<li><code>GET /transactions/{id}</code> — с вложенными user, category, account</li>
+<li><code>PATCH /transactions/{id}</code> — пересчёт балансов</li>
+<li><code>DELETE /transactions/{id}</code> — возврат суммы из счёта</li>
+</ul>
+<hr />
+<h2 id="_7">Счета</h2>
+<ul>
+<li><code>POST /accounts/</code></li>
+<li><code>GET /accounts/</code></li>
+<li><code>GET /accounts/{id}</code> — с вложенными транзакциями</li>
+<li><code>PATCH /accounts/{id}</code></li>
+<li><code>DELETE /accounts/{id}</code></li>
+</ul>
+<hr />
+<h2 id="_8">Категории</h2>
+<ul>
+<li><code>POST /categories/</code></li>
+<li><code>GET /categories/</code></li>
+<li><code>GET /categories/{id}</code> — с предпочтениями пользователей</li>
+<li><code>PATCH /categories/{id}</code></li>
+<li><code>DELETE /categories/{id}</code></li>
+</ul>
+<hr />
+<h2 id="_9">Бюджеты</h2>
+<ul>
+<li><code>POST /budgets/</code></li>
+<li><code>GET /budgets/</code></li>
+<li><code>GET /budgets/{id}</code> — с вложенными user и category</li>
+<li><code>PATCH /budgets/{id}</code></li>
+<li><code>DELETE /budgets/{id}</code></li>
+</ul>
+<hr />
+<h2 id="_10">Цели</h2>
+<ul>
+<li><code>POST /goals/</code></li>
+<li><code>GET /goals/</code></li>
+<li><code>GET /goals/{id}</code> — с вложенным user</li>
+<li><code>PATCH /goals/{id}</code></li>
+<li><code>DELETE /goals/{id}</code></li>
+</ul>
+<hr />
+<h2 id="many-to-many">Предпочтения категорий (many-to-many)</h2>
+<ul>
+<li><code>POST /preferences/</code></li>
+<li><code>GET /preferences/</code></li>
+<li><code>GET /preferences/{user_id}/{category_id}</code></li>
+<li><code>DELETE /preferences/{user_id}/{category_id}</code></li>
+</ul>
+<hr />
+<h2 id="_11">Модели данных</h2>
+<ul>
+<li><code>User</code> ←→ <code>Transaction</code>, <code>Account</code>, <code>Goal</code>, <code>Budget</code>, <code>UserCategoryPreference</code></li>
+<li><code>Transaction</code> — содержит связи с <code>Category</code>, <code>Account</code></li>
+<li><code>Budget</code> — связывает <code>User</code> и <code>Category</code></li>
+<li><code>UserCategoryPreference</code> — many-to-many с полем <code>notification_enabled</code></li>
+</ul>
+<hr />
+<h2 id="swagger">Swagger</h2>
+<p><img alt="1" src="../1.png" />
+<img alt="2" src="../2.png" />
+<img alt="3" src="../3.png" />
+<img alt="4" src="../4.png" /></p>
+<hr />
+<h2 id="_12">Миграции</h2>
+<p>Миграции управляются через Alembic, примеры:</p>
+<pre><code class="language-bash">alembic revision --autogenerate -m &quot;Initial&quot;
+alembic upgrade head
+</code></pre>
+<hr />
+<h3 id="coreauthpy"><code>/core/auth.py</code></h3>
+<pre><code class="language-python">import os
+import jwt
+from passlib.hash import bcrypt
+from fastapi import HTTPException, status, Depends, Security
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+from sqlmodel import Session
+from datetime import datetime, timedelta
+
+from app.db.connection import get_session
+from app.models.finance_models import User
+
+JWT_SECRET = os.getenv(&quot;JWT_SECRET&quot;, &quot;SUPERSECRET&quot;)
+JWT_ALGORITHM = &quot;HS256&quot;
+ACCESS_TOKEN_EXPIRE_MINUTES = 60
+
+# Определяем схему безопасности
+bearer_scheme = HTTPBearer()
+
+
+# хэширование
+def hash_password(password: str) -&gt; str:
+    return bcrypt.using(rounds=12).hash(password)
+
+def verify_password(plain_password: str, hashed_password: str) -&gt; bool:
+    return bcrypt.verify(plain_password, hashed_password)
+
+# JWT
+def create_access_token(user_id: int) -&gt; str:
+    expire = datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    payload = {
+        &quot;sub&quot;: str(user_id),
+        &quot;exp&quot;: expire
+    }
+    token = jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)
+    return token
+
+def decode_access_token(token: str) -&gt; int:
+    try:
+        payload = jwt.decode(token, JWT_SECRET, algorithms=[JWT_ALGORITHM])
+        user_id = int(payload[&quot;sub&quot;])
+        return user_id
+    except jwt.ExpiredSignatureError:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail=&quot;Token expired&quot;
+        )
+    except jwt.InvalidTokenError:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail=&quot;Invalid token&quot;
+        )
+
+def get_current_user(
+    credentials: HTTPAuthorizationCredentials = Security(bearer_scheme),
+    session: Session = Depends(get_session)
+) -&gt; User:
+    &quot;&quot;&quot;
+    Функция вызывается при каждом запросе к защищённому эндпоинту.
+    1) HTTPBearer сам найдёт заголовок &quot;Authorization: Bearer &lt;token&gt;&quot;
+    2) credentials.credentials = &quot;&lt;token&gt;&quot;
+    3) Декодируем токен и получаем user_id
+    4) Ищем пользователя в БД
+    &quot;&quot;&quot;
+    token = credentials.credentials
+    user_id = decode_access_token(token)
+
+    user = session.get(User, user_id)
+    if not user:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail=&quot;User not found&quot;
+        )
+    return user
+</code></pre>
+<h3 id="modelsfinance_modelspy"><code>/models/finance_models.py</code></h3>
+<pre><code class="language-python">from typing import Optional, List
+from sqlmodel import SQLModel, Field, Relationship
+from datetime import datetime
+
+class User(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    username: str
+    email: str
+    hashed_password: str  
+
+    transactions: List[&quot;Transaction&quot;] = Relationship(back_populates=&quot;user&quot;)
+    budgets: List[&quot;Budget&quot;] = Relationship(back_populates=&quot;user&quot;)
+    accounts: List[&quot;Account&quot;] = Relationship(back_populates=&quot;user&quot;)
+    goals: List[&quot;Goal&quot;] = Relationship(back_populates=&quot;user&quot;)
+    category_preferences: List[&quot;UserCategoryPreference&quot;] = Relationship(back_populates=&quot;user&quot;)
+
+
+class Category(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    name: str
+    transactions: List[&quot;Transaction&quot;] = Relationship(back_populates=&quot;category&quot;)
+    budgets: List[&quot;Budget&quot;] = Relationship(back_populates=&quot;category&quot;)
+    user_preferences: List[&quot;UserCategoryPreference&quot;] = Relationship(back_populates=&quot;category&quot;)
+
+
+class Transaction(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    user_id: int = Field(foreign_key=&quot;user.id&quot;)
+    category_id: int = Field(foreign_key=&quot;category.id&quot;)
+    account_id: Optional[int] = Field(default=None, foreign_key=&quot;account.id&quot;)
+
+    amount: float
+    description: Optional[str] = None
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+
+    user: Optional[User] = Relationship(back_populates=&quot;transactions&quot;)
+    category: Optional[Category] = Relationship(back_populates=&quot;transactions&quot;)
+    account: Optional[&quot;Account&quot;] = Relationship(back_populates=&quot;transactions&quot;)
+
+
+class Budget(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    user_id: int = Field(foreign_key=&quot;user.id&quot;)
+    category_id: int = Field(foreign_key=&quot;category.id&quot;)
+    limit_amount: float
+
+    user: Optional[User] = Relationship(back_populates=&quot;budgets&quot;)
+    category: Optional[Category] = Relationship(back_populates=&quot;budgets&quot;)
+
+
+class Account(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    user_id: int = Field(foreign_key=&quot;user.id&quot;)
+    name: str
+    balance: float = 0.0
+
+    user: Optional[User] = Relationship(back_populates=&quot;accounts&quot;)
+    transactions: List[Transaction] = Relationship(back_populates=&quot;account&quot;)
+
+
+class Goal(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    user_id: int = Field(foreign_key=&quot;user.id&quot;)
+    title: str
+    target_amount: float
+    deadline: Optional[datetime] = None
+    current_amount: float = 0.0
+
+    user: Optional[User] = Relationship(back_populates=&quot;goals&quot;)
+
+class UserCategoryPreference(SQLModel, table=True):
+    user_id: int = Field(foreign_key=&quot;user.id&quot;, primary_key=True)
+    category_id: int = Field(foreign_key=&quot;category.id&quot;, primary_key=True)
+    notification_enabled: bool = Field(default=True)
+
+    user: Optional[User] = Relationship(back_populates=&quot;category_preferences&quot;)
+    category: Optional[Category] = Relationship(back_populates=&quot;user_preferences&quot;)
+</code></pre>
+<h3 id="schemasfinance_schemaspy"><code>/schemas/finance_schemas.py</code></h3>
+<pre><code class="language-python">from typing import Optional, List
+from datetime import datetime
+from pydantic import BaseModel
+
+class UserRegister(BaseModel):
+    username: str
+    email: str
+    password: str 
+
+class UserLogin(BaseModel):
+    username_or_email: str
+    password: str
+
+class UserOut(BaseModel):
+    id: int
+    username: str
+    email: str
+
+    class Config:
+        from_attributes = True
+
+
+class CreateCategory(BaseModel):
+    name: str
+
+class CreateTransaction(BaseModel):
+    user_id: int
+    category_id: int
+    account_id: Optional[int] = None
+    amount: float
+    description: Optional[str] = None
+
+class CreateBudget(BaseModel):
+    user_id: int
+    category_id: int
+    limit_amount: float
+
+class CreateAccount(BaseModel):
+    user_id: int
+    name: str
+    balance: float = 0.0
+
+class CreateGoal(BaseModel):
+    user_id: int
+    title: str
+    target_amount: float
+    deadline: Optional[datetime] = None
+    current_amount: float = 0.0
+
+
+# Для чтения:
+class ReadCategory(BaseModel):
+    id: int
+    name: str
+    class Config:
+        from_attributes = True
+
+class ReadTransaction(BaseModel):
+    id: int
+    amount: float
+    description: Optional[str]
+    created_at: datetime
+    account_id: Optional[int] = None
+    class Config:
+        from_attributes = True
+
+class ReadBudget(BaseModel):
+    id: int
+    limit_amount: float
+    class Config:
+        from_attributes = True
+
+class ReadAccount(BaseModel):
+    id: int
+    name: str
+    balance: float
+    class Config:
+        from_attributes = True
+
+class ReadGoal(BaseModel):
+    id: int
+    title: str
+    target_amount: float
+    current_amount: float
+    deadline: Optional[datetime]
+    class Config:
+        from_attributes = True
+
+
+class CreateUserCategoryPreference(BaseModel):
+    user_id: int
+    category_id: int
+    notification_enabled: bool = True
+
+class ReadUserCategoryPreference(BaseModel):
+    user_id: int
+    category_id: int
+    notification_enabled: bool
+    class Config:
+        from_attributes = True
+
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+
+class ReadUserWithRelations(UserOut):
+    accounts: List[ReadAccount] = []
+    transactions: List[ReadTransaction] = []
+    budgets: List[ReadBudget] = []
+    goals: List[ReadGoal] = []
+    category_preferences: List[ReadUserCategoryPreference] = []
+
+    class Config:
+        from_attributes = True
+
+
+class ReadAccountWithTransactions(ReadAccount):
+    transactions: List[ReadTransaction] = []
+
+    class Config:
+        from_attributes = True
+
+class ReadCategoryWithUsers(ReadCategory):
+    user_preferences: List[ReadUserCategoryPreference] = []
+
+    class Config:
+        from_attributes = True
+
+
+class ReadGoalWithUser(ReadGoal):
+    user: Optional[UserOut] = None
+
+    class Config:
+        from_attributes = True
+
+
+
+class ReadBudgetFull(ReadBudget):
+    user: Optional[UserOut] = None
+    category: Optional[ReadCategory] = None
+
+    class Config:
+        from_attributes = True
+
+
+
+class ReadTransactionFull(ReadTransaction):
+    user: Optional[UserOut] = None
+    category: Optional[ReadCategory] = None
+    account: Optional[ReadAccount] = None
+
+    class Config:
+        from_attributes = True
+</code></pre>
+<h3 id="routersuserspy"><code>/routers/users.py</code></h3>
+<pre><code class="language-python">from fastapi import APIRouter, Depends, HTTPException
+from sqlmodel import select
+from typing import List
+from sqlmodel import Session
+from sqlalchemy.orm import selectinload
+
+from app.db.connection import get_session
+from app.models.finance_models import User
+from app.schemas.finance_schemas import UserRegister, UserOut, ReadUserWithRelations
+
+router = APIRouter(prefix=&quot;/users&quot;, tags=[&quot;Users&quot;])
+
+@router.post(&quot;/&quot;, response_model=UserOut)
+def create_user(user: UserRegister, session: Session = Depends(get_session)):
+    new_user = User(
+        username=user.username,
+        email=user.email
+    )
+    session.add(new_user)
+    session.commit()
+    session.refresh(new_user)
+    return new_user
+
+@router.get(&quot;/&quot;, response_model=List[UserOut])
+def get_all_users(session: Session = Depends(get_session)):
+    result = session.exec(select(User)).all()
+    return result
+
+@router.get(&quot;/{user_id}&quot;, response_model=ReadUserWithRelations)
+def get_user(user_id: int, session: Session = Depends(get_session)):
+    stmt = (
+        select(User)
+        .where(User.id == user_id)
+        .options(
+            selectinload(User.accounts),
+            selectinload(User.transactions),
+            selectinload(User.budgets),
+            selectinload(User.goals),
+            selectinload(User.category_preferences)
+        )
+    )
+    user = session.exec(stmt).first()
+    if not user:
+        raise HTTPException(status_code=404, detail=&quot;User not found&quot;)
+    return user
+
+@router.patch(&quot;/{user_id}&quot;, response_model=UserOut)
+def update_user(user_id: int, user_data: UserRegister, session: Session = Depends(get_session)):
+    db_user = session.get(User, user_id)
+    if not db_user:
+        raise HTTPException(status_code=404, detail=&quot;User not found&quot;)
+    db_user.username = user_data.username
+    db_user.email = user_data.email
+
+    session.add(db_user)
+    session.commit()
+    session.refresh(db_user)
+    return db_user
+
+@router.delete(&quot;/{user_id}&quot;)
+def delete_user(user_id: int, session: Session = Depends(get_session)):
+    db_user = session.get(User, user_id)
+    if not db_user:
+        raise HTTPException(status_code=404, detail=&quot;User not found&quot;)
+    session.delete(db_user)
+    session.commit()
+    return {&quot;ok&quot;: True}
+</code></pre>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.7.0">
+     
+     
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>Lab 2 - just_place</title>
+
+
+<link href="../../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../../css/normalize.css" rel="stylesheet">
+<link href="../../../css/terminal.css" rel="stylesheet">
+<link href="../../../css/theme.css" rel="stylesheet">
+<link href="../../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../../css/theme.footer.css" rel="stylesheet">
+<!-- default color palette -->
+<link href="../../../css/palettes/default.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="/" class="no-style">just_place</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Home</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                
+                
+                
+                    
+                    
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+  
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../..">Home</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item--active terminal-mkdocs-side-nav-section-no-index">Semester 1</span>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Lab 1</span>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        <span class="
+
+    terminal-mkdocs-side-nav-item--active">Lab 2</span>
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Lab 3</span>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../../Lab4/lab4/">Lab 4</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../../Prac3.1/prac3_1/">Prac 3.1</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Semester 2</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../../Lab1_sem2/lab1/">Lab 1</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../../Lab2_sem2/lab2/">Lab 2</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../../Lab3_sem2/lab3/">Lab 3</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+    </ul>
+  
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#django">Документация проекта Django: Система управления отелями</a></li>
+        <li><a href="#_1">Оглавление</a></li><li><a href="#_2">Введение</a></li><li><a href="#_3">Структура проекта</a></li><li><a href="#_4">Функциональные возможности</a></li><li><a href="#_5">Модели</a></li><li><a href="#_6">Формы</a></li><li><a href="#url-">URL-адреса</a></li><li><a href="#_7">Представления</a></li><li><a href="#_8">Администрирование</a></li><li><a href="#_9">Заключение</a></li>
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="django">Документация проекта Django: Система управления отелями</h1>
+<h2 id="_1">Оглавление</h2>
+<ol>
+<li><a href="#введение">Введение</a></li>
+<li><a href="#структура-проекта">Структура проекта</a></li>
+<li><a href="#функциональные-возможности">Функциональные возможности</a></li>
+<li><a href="#модели">Модели</a></li>
+<li><a href="#формы">Формы</a></li>
+<li><a href="#url-адреса">URL-адреса</a></li>
+<li><a href="#представления">Представления</a></li>
+<li><a href="#администрирование">Администрирование</a></li>
+<li><a href="#заключение">Заключение</a></li>
+</ol>
+<h2 id="_2">Введение</h2>
+<p>Данный проект — это система управления отелями, позволяющая пользователям бронировать номера, оставлять отзывы, а администраторам — управлять заселением и выселением через административную панель.</p>
+<h2 id="_3">Структура проекта</h2>
+<p>Основные файлы и директории проекта:</p>
+<ul>
+<li>models.py: Определение моделей базы данных для отелей, номеров, бронирований, отзывов и гостей.</li>
+<li>forms.py: Формы для регистрации и создания бронирований.</li>
+<li>views.py: Представления, реализующие основную логику работы с данными.</li>
+<li>urls.py: Настройка маршрутов приложения.</li>
+<li>admin.py: Настройки административной панели для управления данными.</li>
+<li>settings.py: Настройки для проекта Django.</li>
+<li>templates: Страницы html.</li>
+</ul>
+<h2 id="_4">Функциональные возможности</h2>
+<p><strong>Навигационная панель</strong></p>
+<p>Панель, на которой расположены все необходимые страницы для управления бронированием. Также есть две страниц предназначенные только для привилегированных пользователей (Админ-панель, Постояльцы за последний месяц), остальным пользователям он не видны.
+<img alt="" src="../nav.png" /></p>
+<p><strong>Домашняя страница</strong></p>
+<ol>
+<li>
+<p>Возможность зарегистрироваться или войти в уже созданный аккаунт.
+<img alt="" src="../home.png" /></p>
+</li>
+<li>
+<p>Возможность выйти из аккаунта
+<img alt="" src="../logout.png" /></p>
+</li>
+</ol>
+<p><strong>Регистрация пользователей</strong></p>
+<p>Возможность создания нового аккаунта. Все поля являются обязательными. Email был добавлен в базовую форму регистрации, как обязательный.
+<img alt="" src="../register.png" /></p>
+<p><strong>Вход в аккаунт</strong></p>
+<p>Возможность войти в аккаунт.
+<img alt="" src="../login1.png" /></p>
+<p><strong>Просмотр списка номеров</strong></p>
+<p>Просмотр доступных номеров с пагинацией 2 объекта на страницу.
+<img alt="" src="../room_list.png" /></p>
+<p><strong>Детали номера</strong>
+Информация о номере, а также отзывы, оставленные пользователями, которые уже бронировали данный номер. И кнопка, которая позволяет забронировать номер авторизованным пользователям.
+<img alt="" src="../room_detail.png" /></p>
+<p><strong>Бронирование номера</strong></p>
+<p>Форма с выбором дат. Если на данные даты уже номер занят, то высветится причина, и не даст забронировать.
+<img alt="" src="../book.png" /></p>
+<p><strong>Список с бронированиями</strong></p>
+<p>Список, которые показывает забронированные пользователем номера, также есть возможность оставить отзыв (единожды), обновить даты бронирования, а также удалить бронирование. Если бронирование уже "сompleted", то пропадает возможность редактировать и удалять бронирование.
+<img alt="" src="../book_list.png" /></p>
+<p><strong>Редактирование бронированиями</strong></p>
+<p>Редактирование бронирования.
+<img alt="" src="../book_edit.png" /></p>
+<p><strong>Удаление бронированиями</strong></p>
+<p>Удаление бронирования, пользователю выведется дополнительное окно с подтверждением действия.
+<img alt="" src="../book_delete.png" /></p>
+<p><strong>Оставление отзывов</strong></p>
+<p>Пользователи могут оставить отзыв о своих бронированиях c рейтингом от 1 до 10 и текстовым описанием.
+<img alt="" src="../review_add.png" /></p>
+<p><strong>Просмотр постояльцев за последний месяц</strong>: </p>
+<p>Таблица с информацией о гостях за последние 30 дней.
+<img alt="" src="../recent_guests.png" /></p>
+<p><strong>Административное управление</strong></p>
+<p>Широкие возможности управления процессами в отеле администратора.
+<img alt="" src="../admin.png" /></p>
+<p><strong>Управление статусом бронирования в админ-панели</strong></p>
+<p>Возможность выставить статус "заселяется" или "заселен" нескольким пользователям при помощи дополнительных действий.
+<img alt="" src="../book_actions.png" /></p>
+<h2 id="_5">Модели</h2>
+<p><strong>Функция проверки даты</strong></p>
+<p>Проверяет правильно ли пользователь ввел дату, и не сделал бронирование на уже прошедшие дни</p>
+<pre><code class="language-python"># Проверка, что дата установлена на будущее
+def validate_future_date(value):
+    if value &lt; date.today():
+        raise ValidationError(
+            _('%(value)s is in the past! Please enter a future date.'),
+            params={'value': value},
+        )
+</code></pre>
+<p><strong>Hotel</strong></p>
+<p>Модель для хранения информации об отелях, включающая название, владельца, адрес и описание.</p>
+<pre><code class="language-python"># Модель отеля
+class Hotel(models.Model):
+    name = models.CharField(max_length=255)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='hotels')
+    address = models.CharField(max_length=255)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.name
+</code></pre>
+<p><strong>RoomType</strong></p>
+<p>Модель для определения типов номеров с названиями и описаниями.</p>
+<pre><code class="language-python"># Модель типа номера (например, &quot;Люкс&quot;, &quot;Эконом&quot;)
+class RoomType(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.name
+</code></pre>
+<p><strong>Room</strong></p>
+<p>Модель номеров отеля. Включает:</p>
+<ul>
+<li>Ссылку на отель и тип номера.</li>
+<li>Стоимость за ночь и вместимость.</li>
+<li>Описание удобств.</li>
+</ul>
+<pre><code class="language-python"># Модель номера
+class Room(models.Model):
+    # Отель, к которому принадлежит номер
+    hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE, related_name='rooms')
+    # Тип номера
+    room_type = models.ForeignKey(RoomType, on_delete=models.CASCADE)
+    cost_per_night = models.DecimalField(
+        max_digits=8,
+        decimal_places=2,
+        validators=[MinValueValidator(0.0)]
+    )
+    capacity = models.IntegerField(
+        validators=[MinValueValidator(1)]
+    )
+    amenities = models.TextField()
+
+    def __str__(self):
+        return f&quot;{self.hotel.name} - {self.room_type.name}&quot;
+</code></pre>
+<p><strong>Booking</strong></p>
+<p>Модель бронирования номера. Включает:</p>
+<ul>
+<li>Пользователя, номер, даты начала и окончания бронирования.</li>
+<li>Статус бронирования, с вариантами (pending, confirmed, checked_in, checked_out, cancelled, completed).</li>
+</ul>
+<pre><code class="language-python"># Модель бронирования
+class Booking(models.Model):
+    # Возможные статусы бронирования
+    STATUS_CHOICES = [
+        ('pending', 'Pending'),
+        ('confirmed', 'Confirmed'),
+        ('checked_in', 'Checked In'),
+        ('checked_out', 'Checked Out'),
+        ('cancelled', 'Cancelled'),
+        ('completed', 'Completed'),
+    ]
+    # Пользователь, совершивший бронирование
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='bookings')
+    # Номер, который бронируется
+    room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    start_date = models.DateField()
+    end_date = models.DateField()
+    # Статус бронирования
+    status = models.CharField(
+        max_length=20,
+        choices=STATUS_CHOICES,
+        default='pending'
+    )
+
+    # Проверка, что дата окончания после даты начала
+    def clean(self):
+        if self.start_date and self.end_date:
+            if self.end_date &lt; self.start_date:
+                raise ValidationError(_('Конечная дата должна быть позже начальной.'))
+
+    def save(self, *args, **kwargs):
+        self.clean()
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f&quot;Booking by {self.user.username} in {self.room}&quot;
+</code></pre>
+<p><strong>Review</strong></p>
+<p>Модель отзывов к бронированию, включающая рейтинг (1-10), комментарий и период проживания.</p>
+<pre><code class="language-python"># Модель отзыва о бронировании
+class Review(models.Model):
+    # Бронирование, к которому относится отзыв
+    booking = models.ForeignKey(Booking, on_delete=models.CASCADE, related_name='reviews')
+    # Рейтинг отзыва
+    rating = models.IntegerField(
+        validators=[
+            MinValueValidator(1, message=&quot;Рейтинг должен быть минимум 1&quot;),
+            MaxValueValidator(10, message=&quot;Рейтинг не должен превышать 10&quot;)
+        ]
+    )
+    comment = models.TextField()
+
+    # Установка дат проживания из бронирования
+    def save(self, *args, **kwargs):
+        if self.booking:
+            self.start_date = self.booking.start_date
+            self.end_date = self.booking.end_date
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f&quot;Отзыв {self.booking.user.username} для {self.booking.room}&quot;
+
+</code></pre>
+<p><strong>Guest</strong></p>
+<p>Модель для хранения данных о гостях, добавляющихся к бронированию.</p>
+<pre><code class="language-python">class Guest(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='guest_bookings')
+    booking = models.ForeignKey(Booking, on_delete=models.CASCADE)
+    is_primary_guest = models.BooleanField(default=False)
+    special_requests = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return f&quot;{self.user.u
+</code></pre>
+<h2 id="_6">Формы</h2>
+<p>Файл forms.py содержит формы для регистрации пользователей и создания бронирований.</p>
+<p><strong>UserRegistrationForm</strong>: Используется для регистрации нового пользователя.</p>
+<pre><code class="language-python"># Форма регистрации нового пользователя
+class UserRegistrationForm(UserCreationForm):
+    email = forms.EmailField(required=True)
+
+    class Meta:
+        model = User
+        # Поля, которые будут отображаться в форме регистрации
+        fields = ('username', 'email', 'password1', 'password2')
+
+    # Переопределение метода save для сохранения email
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        user.email = self.cleaned_data['email']
+        if commit:
+            user.save()
+        return user
+
+</code></pre>
+<p><strong>BookingForm</strong>: Форма создания бронирования, включает поля для выбора номера, даты начала и окончания проживания, проверки на то, что дата окончания после начала, и что бронирование создается на будущее.</p>
+<pre><code class="language-python"># Форма для создания нового бронирования
+class BookingForm(forms.ModelForm):
+    class Meta:
+        model = Booking
+        fields = ['start_date', 'end_date']
+        # Устанавливаем виджеты для отображения календаря в полях выбора даты
+        widgets = {
+            'start_date': forms.DateInput(attrs={'type': 'date'}),
+            'end_date': forms.DateInput(attrs={'type': 'date'}),
+        }
+    # Переопределение конструктора для дополнительного параметра room
+    def __init__(self, *args, **kwargs):
+        self.room = kwargs.pop('room', None)
+        super().__init__(*args, **kwargs)
+
+    # Проверка даты начала и окончания бронирования
+    def clean(self):
+        cleaned_data = super().clean()  # Получаем &quot;очищенные&quot; данные из формы, которые уже прошли базовую проверку Django.
+        start_date = cleaned_data.get('start_date')  # Извлекаем поле start_date из очищенных данных.
+        end_date = cleaned_data.get('end_date')  # Извлекаем поле end_date из очищенных данных.
+
+        # Проверка на существующие бронирования для данной комнаты
+        if start_date and end_date and self.room:
+            # Проверяем, существуют ли пересекающиеся бронирования для выбранной комнаты
+            existing_bookings = Booking.objects.filter(
+                room=self.room,
+                start_date__lte=end_date,
+                end_date__gte=start_date
+            ).exclude(pk=self.instance.pk if self.instance.pk else None)
+
+            if existing_bookings.exists():
+                raise forms.ValidationError('Комната уже забронирована на выбранные даты')
+
+        return cleaned_data
+
+</code></pre>
+<p><strong>ReviewForm</strong></p>
+<pre><code class="language-python"># Форма для добавления отзыва на бронирование
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ['rating', 'comment']
+</code></pre>
+<h2 id="url-">URL-адреса</h2>
+<p>Файл urls.py содержит маршруты.</p>
+<p><strong>Основные маршруты</strong></p>
+<ul>
+<li>/: — главная страница приложения.</li>
+<li>/login/, /logout/: Вход и выход пользователя.</li>
+<li>/register/: Регистрация нового пользователя.</li>
+<li>/rooms/: Просмотр списка доступных номеров с деталями.</li>
+<li>/room/\<int:pk>/: Просмотр информации о конкретном номере.</li>
+<li>/room/\<int:room_pk>/book/: Создание бронирования для номера.</li>
+<li>/bookings/: Просмотр списка бронирований пользователя.</li>
+<li>/booking/\<int:pk>/edit/, /booking/\<int:pk>/delete/: Редактирование и удаление бронирования.</li>
+<li>/booking/\<int:booking_id>/add_review/: Добавление отзыва к бронированию.</li>
+<li>/recent_guests/: Таблица с постояльцами отеля за последний месяц.</li>
+</ul>
+<pre><code class="language-python">urlpatterns = [
+    # Главная страница
+    path('', views.home, name='home'),
+    # Вход пользователя
+    path('login/', LoginView.as_view(template_name='login.html'), name='login'),
+    # Выход пользователя
+    path('logout/', LogoutView.as_view(), name='logout'),
+    # Регистрация нового пользователя
+    path('register/', views.register, name='register'),
+    # Просмотр списка комнат
+    path('rooms/', views.room_list, name='room_list'),
+    # Просмотр деталей комнаты
+    path('room/&lt;int:pk&gt;/', views.room_detail, name='room_detail'),
+    # Создание бронирования комнаты
+    path('room/&lt;int:room_pk&gt;/book/', views.booking_create, name='booking_create'),
+    # Список бронирований пользователя
+    path('bookings/', views.booking_list, name='booking_list'),
+    # Редактирование бронирования
+    path('booking/&lt;int:pk&gt;/edit/', views.booking_update, name='booking_update'),
+    # Удаление бронирования
+    path('booking/&lt;int:pk&gt;/delete/', views.booking_delete, name='booking_delete'),
+    # Добавление отзыва к бронированию
+    path('booking/&lt;int:booking_id&gt;/add_review/', views.add_review, name='add_review'),
+    # Просмотр гостей за последний месяц
+    path('recent_guests/', views.recent_guests, name='recent_guests'),
+]
+</code></pre>
+<h2 id="_7">Представления</h2>
+<p>Файл views.py — представления для обработки запросов.</p>
+<p><strong>Главная страница</strong></p>
+<p>На главной странице отображается форма для входа и регистрации, если пользователь уже зарегистрирован, то кнопка выход.</p>
+<pre><code class="language-python"># Главная страница
+def home(request):
+    return render(request, 'home.html')
+</code></pre>
+<p><strong>Регистрация пользователя</strong> 
+Используется стандартная форма регистрации, используемая в Django.</p>
+<pre><code class="language-python"># Регистрация нового пользователя
+def register(request):
+    if request.method == 'POST':
+        form = UserRegistrationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            messages.success(request, 'Вы успешно зарегистрировались!')
+            return redirect('room_list')
+    else:
+        form = UserRegistrationForm()
+    return render(request, 'register.html', {'form': form})
+</code></pre>
+<p><strong>Список комнат</strong></p>
+<p>Отображения списком существующих комнат с описанием, также реализована пагинация для более удобного отображения номеров.</p>
+<pre><code class="language-python"># Просмотр списка доступных номеров
+def room_list(request):
+    search_query = request.GET.get('search', '')  # Получаем поисковый запрос, если он есть
+
+    if search_query: # Если запрос есть, фильтруем номера по отелю или типу комнаты
+        rooms = Room.objects.filter(
+            hotel__name__icontains=search_query
+        ) | Room.objects.filter(
+            room_type__name__icontains=search_query
+        )
+    else: # Если нет запроса, выбираем все номера
+        rooms = Room.objects.all()
+
+    paginator = Paginator(rooms, 2)  # Количество объектов на страницу
+    page_number = request.GET.get('page') # Получаем номер страницы из GET-запроса
+    page_obj = paginator.get_page(page_number) # Получаем текущую страницу с объектами
+
+    return render(request, 'room_list.html', {'page_obj': page_obj, 'search_query': search_query})
+</code></pre>
+<p><strong>Детали о номере</strong></p>
+<p>Более подробная информация о комнате</p>
+<pre><code class="language-python"># Подробная информация о конкретном номере
+def room_detail(request, pk):
+    room = get_object_or_404(Room, pk=pk)
+    reviews = Review.objects.filter(booking__room=room) # Отзывы, связанные с этим номером
+    return render(request, 'room_detail.html', {'room': room, 'reviews': reviews})
+</code></pre>
+<p><strong>Бронирование комнаты</strong></p>
+<p>Бронирование конкретного номера для конкретного пользователя</p>
+<pre><code class="language-python"># Создание бронирования для конкретного номера
+@login_required
+def booking_create(request, room_pk):
+    room = get_object_or_404(Room, pk=room_pk)
+    if request.method == 'POST':
+        form = BookingForm(request.POST, room=room)
+        if form.is_valid():
+            booking = form.save(commit=False)
+            booking.user = request.user
+            booking.room = room
+            booking.status = 'pending'
+            booking.save()
+            messages.success(request, 'Бронирование создано успешно!')
+            return redirect('booking_list')
+    else:
+        form = BookingForm()
+    return render(request, 'booking_form.html', {'form': form, 'room': room})
+</code></pre>
+<p><strong>Список бронирований пользователя</strong></p>
+<p>Отображение списком всех бронирований пользователя</p>
+<pre><code class="language-python"># Список бронирований текущего пользователя
+@login_required
+def booking_list(request):
+    bookings = Booking.objects.filter(user=request.user)
+    return render(request, 'booking_list.html', {'bookings': bookings})
+</code></pre>
+<p><strong>Обновление бронирования</strong></p>
+<p>У пользователя есть возможность обновить даты бронирования номера</p>
+<pre><code class="language-python"># Обновление информации о бронировании
+@login_required
+def booking_update(request, pk):
+    booking = get_object_or_404(Booking, pk=pk)
+    # Проверка, что пользователь является владельцем бронирования
+    if booking.user != request.user:
+        messages.error(request, 'Вы не можете редактировать это бронирование.')
+        return redirect('booking_list')
+
+    # Проверка, что бронь уже кончилась
+    if booking.status == 'completed':
+        messages.error(request, 'Вы уже не можете обновить это бронирование.')
+        return redirect('booking_list')
+
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Бронирование обновлено успешно!')
+            return redirect('booking_list')
+    else:
+        form = BookingForm(instance=booking)
+    return render(request, 'booking_form.html', {'form': form, 'booking': booking})
+</code></pre>
+<p><strong>Удаление бронирования</strong></p>
+<p>У пользователя есть возможность отменить бронирование</p>
+<pre><code class="language-python"># Удаление бронирования
+@login_required
+def booking_delete(request, pk):
+    booking = get_object_or_404(Booking, pk=pk)
+    if booking.user != request.user:
+        messages.error(request, 'Вы не можете удалить это бронирование.')
+        return redirect('booking_list')
+
+    if booking.status == 'completed':
+        messages.error(request, 'Вы уже не можете удалить это бронирование.')
+        return redirect('booking_list')
+
+    if request.method == 'POST':
+        booking.delete()
+        messages.success(request, 'Бронирование удалено успешно!')
+        return redirect('booking_list')
+    return render(request, 'booking_confirm_delete.html', {'booking': booking})
+</code></pre>
+<p><strong>Добавление отзыва к бронированию</strong></p>
+<p>У пользователя есть возможность добавить отзыв к бронированию</p>
+<pre><code class="language-python"># Добавление отзыва к бронированию
+def add_review(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id, user=request.user)
+
+    # Проверка, существует ли уже отзыв для этого бронирования
+    if Review.objects.filter(booking=booking).exists():
+        messages.error(request, 'Вы уже создали отзыв.')
+        return redirect('booking_list')
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.booking = booking # Привязываем отзыв к бронированию
+            review.save()
+            messages.success(request, 'Отзыв оставлен успешно!')
+            return redirect('booking_list')
+    else:
+        form = ReviewForm()
+    return render(request, 'add_review.html', {'form': form, 'booking': booking})
+</code></pre>
+<p><strong>Гости отелей за предыдущий месяц</strong></p>
+<p>У админа есть возможность посмотреть старые бронирования</p>
+<pre><code class="language-python"># Просмотр последних гостей за месяц (доступен только суперпользователю)
+@user_passes_test(lambda user: user.is_superuser)
+def recent_guests(request):
+    last_month = timezone.now().date() - timedelta(days=30) # Вычисление даты месяц назад
+    guests = Booking.objects.filter(
+        status='completed',
+        start_date__gte=last_month
+    ).select_related('user', 'room', 'room__hotel') # Выборка завершенных бронирований за последний месяц
+    return render(request, 'recent_guests.html', {'guests': guests})
+</code></pre>
+<h2 id="_8">Администрирование</h2>
+<p><strong>Основные возможности административной панели:</strong></p>
+<ul>
+<li>Управление отелями, комнатами и типами комнат.</li>
+<li>Управление бронированиями (заселение, выселение, изменение статусов).</li>
+<li>Просмотр и редактирование отзывов.</li>
+<li>Управление пользователями и гостями, прикрепленными к бронированиям.</li>
+</ul>
+<pre><code class="language-python"># Админ-панель отеля
+@admin.register(Hotel)
+class HotelAdmin(admin.ModelAdmin):
+    list_display = ('name', 'owner', 'address')
+    search_fields = ('name', 'address')
+    list_filter = ('owner',)
+
+# Админ-панель типа комнаты
+@admin.register(RoomType)
+class RoomTypeAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+    search_fields = ('name',)
+
+# Админ-панель номера отеля
+@admin.register(Room)
+class RoomAdmin(admin.ModelAdmin):
+    list_display = ('hotel', 'room_type', 'cost_per_night', 'capacity')
+    list_filter = ('hotel', 'room_type', 'capacity')
+    search_fields = ('hotel__name', 'room_type__name')
+
+# Админ-панель бронирования
+@admin.register(Booking)
+class BookingAdmin(admin.ModelAdmin):
+    list_display = ('user', 'room', 'start_date', 'end_date', 'status')
+    list_filter = ('status', 'start_date', 'end_date')
+    search_fields = ('user__username', 'room__hotel__name')
+
+    actions = ['mark_as_checked_in', 'mark_as_checked_out']
+
+    def mark_as_checked_in(self, request, queryset):
+        updated = queryset.update(status='checked_in')
+        self.message_user(request, f&quot;{updated} booking(s) marked as Checked In.&quot;)
+
+    def mark_as_checked_out(self, request, queryset):
+        updated = queryset.update(status='checked_out')
+        self.message_user(request, f&quot;{updated} booking(s) marked as Checked Out.&quot;)
+
+    mark_as_checked_in.short_description = 'Mark selected bookings as Checked In'
+    mark_as_checked_out.short_description = 'Mark selected bookings as Checked Out'
+
+# Админ-панель отзывов
+@admin.register(Review)
+class ReviewAdmin(admin.ModelAdmin):
+    list_display = ('booking', 'rating', 'get_start_date', 'get_end_date')
+    list_filter = ('rating',)
+    search_fields = ('booking__user__username', 'comment')
+
+    def get_start_date(self, obj):
+        return obj.booking.start_date
+    get_start_date.short_description = 'Start Date'
+
+    def get_end_date(self, obj):
+        return obj.booking.end_date
+    get_end_date.short_description = 'End Date'
+
+# Админ-панель гостей
+@admin.register(Guest)
+class GuestAdmin(admin.ModelAdmin):
+    list_display = ('user', 'booking', 'is_primary_guest')
+    list_filter = ('is_primary_guest',)
+    search_fields = ('user__username',)
+</code></pre>
+<h2 id="_9">Заключение</h2>
+<p>Проект предоставляет широкие возможности для управления отелями, бронирования и отзывов.</p>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    
+    
+</body>
+
+</html>

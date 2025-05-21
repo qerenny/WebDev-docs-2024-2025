@@ -1,0 +1,3376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.7.0">
+     
+     
+    <link rel="icon" type="image/png" sizes="192x192" href="../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>Lab 4 - just_place</title>
+
+
+<link href="../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../css/normalize.css" rel="stylesheet">
+<link href="../../css/terminal.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../css/theme.footer.css" rel="stylesheet">
+<!-- default color palette -->
+<link href="../../css/palettes/default.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="/" class="no-style">just_place</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Home</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                
+                
+                
+                    
+                    
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+  
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../..">Home</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item--active terminal-mkdocs-side-nav-section-no-index">Semester 1</span>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Lab 1</span>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../Lab2/Lab2_task/Task/">Lab 2</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Lab 3</span>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        <span class="
+
+    terminal-mkdocs-side-nav-item--active">Lab 4</span>
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../Prac3.1/prac3_1/">Prac 3.1</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Semester 2</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../Lab1_sem2/lab1/">Lab 1</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../Lab2_sem2/lab2/">Lab 2</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../Lab3_sem2/lab3/">Lab 3</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+    </ul>
+  
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#hotel-system">Документация проекта Hotel System</a></li>
+        <li><a href="#_1">Содержание</a></li><li><a href="#introduction">Introduction</a></li><li><a href="#installing">Installing</a></li><li><a href="#structure">Structure</a></li><li><a href="#components">Components</a></li><li><a href="#routing">Routing</a></li><li><a href="#auth">Auth</a></li><li><a href="#integration-api">Integration API</a></li><li><a href="#vuetify">Vuetify</a></li><li><a href="#api">API</a></li>
+        <li><a href="#edpoints">Edpoints</a></li><li><a href="#_7">Авторизация и Аутентификация</a></li>
+        <li><a href="#_8">Процесс авторизации</a></li><li><a href="#_9">Пример использования токена</a></li><li><a href="#vuetify_3">Использование Vuetify</a></li><li><a href="#_11">Заключение</a></li>
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="hotel-system">Документация проекта Hotel System</h1>
+<h2 id="_1">Содержание</h2>
+<ol>
+<li><a href="#I=introduction">Введение</a></li>
+<li><a href="#installing">Установка и настройка</a></li>
+<li><a href="#S=structure">Структура проекта</a></li>
+<li><a href="#components">Компоненты</a><ul>
+<li><a href="#navigationbarvue">NavigationBar.vue</a></li>
+<li><a href="#homevue">Home.vue</a></li>
+<li><a href="#loginvue">Login.vue</a></li>
+<li><a href="#registervue">Register.vue</a></li>
+<li><a href="#profilevue">Profile.vue</a></li>
+<li><a href="#clientsvue">Clients.vue</a></li>
+<li><a href="#roomsvue">Rooms.vue</a></li>
+<li><a href="#staysvue">Stays.vue</a></li>
+<li><a href="#cleaningsvue">Cleanings.vue</a></li>
+<li><a href="#schedulesvue">Schedules.vue</a></li>
+<li><a href="#reportvue">Report.vue</a></li>
+<li><a href="#staffvue">Staff.vue</a></li>
+<li><a href="#startvue">Start.vue</a></li>
+</ul>
+</li>
+<li><a href="#routing">Маршрутизация</a></li>
+<li><a href="#auth">Авторизация и аутентификация</a></li>
+<li><a href="#integration-api">Интеграция с API</a></li>
+<li><a href="#vuetify">Использование Vuetify</a></li>
+<li><a href="#end">Заключение</a></li>
+</ol>
+<hr />
+<h2 id="introduction">Introduction</h2>
+<p><strong>Hotel System</strong> — это веб-приложение для управления гостиницей, реализованное с использованием Vue.js и Vite на клиентской стороне и Django REST framework на серверной стороне. Приложение предоставляет интерфейсы для управления клиентами, сотрудниками, номерами, бронированиями и уборками, а также функции авторизации и регистрации пользователей.</p>
+<h3 id="_2">Используемые технологии</h3>
+<ul>
+<li><strong>Frontend:</strong></li>
+<li>Vue.js 3</li>
+<li>Vite</li>
+<li>Vuetify</li>
+<li>
+<p>Axios</p>
+</li>
+<li>
+<p><strong>Backend:</strong></p>
+</li>
+<li>Django REST framework</li>
+</ul>
+<hr />
+<h2 id="installing">Installing</h2>
+<h3 id="_3">Предварительные требования</h3>
+<ul>
+<li>Node.js (версии 14 и выше)</li>
+<li>npm или yarn</li>
+<li>Python 3.8 и выше</li>
+<li>Django и Django REST framework</li>
+<li>Django CORS Headers</li>
+</ul>
+<h2 id="structure">Structure</h2>
+<pre><code>hotel-system/
+├── src/
+│   ├── assets/
+│   │   └── hotel-styles.css
+│   ├── components/
+│   │   └── NavigationBar.vue
+│   ├── views/
+│   │   ├── Home.vue
+│   │   ├── Login.vue
+│   │   ├── Register.vue
+│   │   ├── Profile.vue
+│   │   ├── Clients.vue
+│   │   ├── Rooms.vue
+│   │   ├── Stays.vue
+│   │   ├── Cleanings.vue
+│   │   ├── Schedules.vue
+│   │   ├── Report.vue
+│   │   ├── Staff.vue
+│   │   └── Start.vue
+│   ├── router/
+│   │   └── router.js
+│   ├── App.vue
+│   └── main.js
+├── public/
+├── package.json
+├── vite.config.js
+└── ... (другие файлы)
+</code></pre>
+<hr />
+<h2 id="components">Components</h2>
+<h3 id="navigationbarvue">NavigationBar.vue</h3>
+<p>Навигационная панель, отображающаяся на всех страницах после авторизации пользователя. Показывает различные кнопки в зависимости от роли пользователя (администратор или обычный пользователь).</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;v-app-bar elevation=&quot;8&quot; color=&quot;#a5f5f4&quot;&gt;
+    &lt;v-toolbar-title&gt;Hotel System&lt;/v-toolbar-title&gt;
+    &lt;v-spacer&gt;&lt;/v-spacer&gt;
+
+    &lt;v-btn text to=&quot;/&quot;&gt;Главная&lt;/v-btn&gt;
+    &lt;v-btn text to=&quot;/profile&quot;&gt;Профиль&lt;/v-btn&gt;
+
+    &lt;!-- Кнопки для сотрудников, отображаются только если пользователь является сотрудником --&gt;
+    &lt;template v-if=&quot;userData.is_staff&quot;&gt;
+      &lt;v-btn text to=&quot;/staff&quot;&gt;Сотрудники&lt;/v-btn&gt;
+      &lt;v-btn text to=&quot;/rooms&quot;&gt;Номера&lt;/v-btn&gt;
+      &lt;v-btn text to=&quot;/clients&quot;&gt;Клиенты&lt;/v-btn&gt;
+      &lt;v-btn text to=&quot;/stays&quot;&gt;Проживания&lt;/v-btn&gt;
+      &lt;v-btn text to=&quot;/cleanings&quot;&gt;Уборки&lt;/v-btn&gt;
+      &lt;v-btn text to=&quot;/schedules&quot;&gt;Расписания&lt;/v-btn&gt;
+      &lt;v-btn text to=&quot;/report&quot;&gt;Отчёт&lt;/v-btn&gt;
+    &lt;/template&gt;
+
+    &lt;v-btn variant=&quot;elevated&quot; color=&quot;error&quot; @click=&quot;logout&quot;&gt;Выйти&lt;/v-btn&gt;
+  &lt;/v-app-bar&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import axios from 'axios'
+
+export default {
+  name: 'NavigationBar',
+  data() {
+    return {
+      token: null,
+      userData: {}
+    }
+  },
+  created() {
+    // Получение токена из локального хранилища при создании компонента
+    this.token = localStorage.getItem('token')
+    if (this.token) {
+      this.fetchUser() // Если токен существует, получить данные пользователя
+    }
+  },
+  methods: {
+    async fetchUser() {
+      try {
+        const response = await axios.get('http://127.0.0.1:8000/auth/users/me/', {
+          headers: { Authorization: `Token ${this.token}` }
+        })
+        this.userData = response.data
+      } catch (error) {
+        console.error(error) 
+      }
+    },
+    logout() {
+      // Удаление токена и данных пользователя при выходе
+      localStorage.removeItem('token')
+      this.token = null
+      this.userData = {}
+      this.$router.push('/start') 
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<p><strong>Описание:</strong></p>
+<ul>
+<li><strong>Data:</strong></li>
+<li><code>token</code>: Хранит токен авторизации пользователя.</li>
+<li>
+<p><code>userData</code>: Хранит данные пользователя, полученные с сервера.</p>
+</li>
+<li>
+<p><strong>Created Hook:</strong></p>
+</li>
+<li>При создании компонента извлекает токен из <code>localStorage</code>.</li>
+<li>
+<p>Если токен существует, вызывает метод <code>fetchUser</code> для получения данных пользователя.</p>
+</li>
+<li>
+<p><strong>Methods:</strong></p>
+</li>
+<li><code>fetchUser</code>: Отправляет GET-запрос к серверу для получения информации о текущем пользователе.</li>
+<li><code>logout</code>: Удаляет токен из <code>localStorage</code>, очищает данные пользователя и перенаправляет на страницу входа.</li>
+</ul>
+<hr />
+<h3 id="homevue">Home.vue</h3>
+<p>Главная страница приложения с приветственным сообщением и кнопкой перехода к профилю.</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;v-container class=&quot;d-flex justify-center&quot;&gt;
+    &lt;v-card
+      class=&quot;pa-5 elevated-card&quot;
+      width=&quot;400&quot;
+      height=&quot;215&quot;
+    &gt;
+      &lt;h2 class=&quot;text-center&quot;&gt;Добро пожаловать в гостиницу!&lt;/h2&gt;
+      &lt;p class=&quot;text-center&quot;&gt;Здесь можно управлять клиентами, сотрудниками, номерами и т. д.&lt;/p&gt;
+      &lt;div class=&quot;d-flex justify-center mt-4&quot;&gt;
+        &lt;v-btn variant=&quot;elevated&quot; color=&quot;primary&quot; to=&quot;/profile&quot;&gt;
+          Перейти к профилю
+        &lt;/v-btn&gt;
+      &lt;/div&gt;
+    &lt;/v-card&gt;
+  &lt;/v-container&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: 'Home'
+}
+&lt;/script&gt;
+</code></pre>
+<p><strong>Описание:</strong></p>
+<ul>
+<li>Простая страница с приветственным сообщением и кнопкой для перехода к профилю пользователя.</li>
+</ul>
+<hr />
+<h3 id="loginvue">Login.vue</h3>
+<p>Компонент авторизации пользователя. Позволяет пользователю войти в систему, введя логин и пароль.</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;v-container class=&quot;mt-4&quot; max-width=&quot;400&quot;&gt;
+    &lt;v-card class=&quot;pa-4 elevated-card&quot;&gt;
+      &lt;h2&gt;Авторизация&lt;/h2&gt;
+      &lt;v-form @submit.prevent=&quot;handleLogin&quot;&gt;
+        &lt;!-- Поле для ввода логина --&gt;
+        &lt;v-text-field
+          v-model=&quot;form.username&quot;
+          label=&quot;Логин&quot;
+          required
+        &gt;&lt;/v-text-field&gt;
+        &lt;!-- Поле для ввода пароля --&gt;
+        &lt;v-text-field
+          v-model=&quot;form.password&quot;
+          label=&quot;Пароль&quot;
+          type=&quot;password&quot;
+          required
+        &gt;&lt;/v-text-field&gt;
+        &lt;!-- Кнопка для отправки формы --&gt;
+        &lt;v-btn variant=&quot;elevated&quot; color=&quot;primary&quot; type=&quot;submit&quot; class=&quot;mr-1&quot;&gt;
+          Войти
+        &lt;/v-btn&gt;
+        &lt;!-- Кнопка для возврата на предыдущую страницу --&gt;
+        &lt;v-btn variant=&quot;outlined&quot; color=&quot;error&quot; @click=&quot;$router.push('/start')&quot; class=&quot;ml-1&quot;&gt;
+          Назад
+        &lt;/v-btn&gt;
+      &lt;/v-form&gt;
+    &lt;/v-card&gt;
+  &lt;/v-container&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import axios from 'axios'
+
+export default {
+  name: 'Login',
+  data() {
+    return {
+      form: {
+        username: '',
+        password: ''
+      }
+    }
+  },
+  methods: {
+    async handleLogin() {
+      try {
+        // Отправка данных для авторизации на сервер
+        const response = await axios.post('http://127.0.0.1:8000/auth/token/login/', {
+          username: this.form.username,
+          password: this.form.password
+        })
+        // Сохранение токена в localStorage
+        const token = response.data.auth_token
+        localStorage.setItem('token', token)
+        // Переход на главную страницу после успешной авторизации
+        this.$router.push({ name: 'home' })
+      } catch (error) {
+        console.error(error)
+      }
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<p><strong>Описание:</strong></p>
+<ul>
+<li><strong>Data:</strong></li>
+<li>
+<p><code>form</code>: Объект, содержащий поля <code>username</code> и <code>password</code>.</p>
+</li>
+<li>
+<p><strong>Methods:</strong></p>
+</li>
+<li><code>handleLogin</code>: Отправляет POST-запрос на сервер с данными формы для авторизации. При успешном ответе сохраняет токен в <code>localStorage</code> и перенаправляет пользователя на главную страницу.</li>
+</ul>
+<hr />
+<h3 id="registervue">Register.vue</h3>
+<p>Компонент регистрации нового пользователя. Позволяет создать новую учетную запись, введя необходимые данные.</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;v-container class=&quot;mt-4&quot; max-width=&quot;400&quot;&gt;
+    &lt;v-card class=&quot;pa-4 elevated-card&quot;&gt;
+      &lt;h2&gt;Регистрация&lt;/h2&gt;
+      &lt;v-form @submit.prevent=&quot;handleRegister&quot;&gt;
+        &lt;!-- Поле для ввода логина --&gt;
+        &lt;v-text-field
+          v-model=&quot;form.username&quot;
+          label=&quot;Логин&quot;
+          required
+        &gt;&lt;/v-text-field&gt;
+        &lt;!-- Поле для ввода email --&gt;
+        &lt;v-text-field
+          v-model=&quot;form.email&quot;
+          label=&quot;Email&quot;
+          required
+        &gt;&lt;/v-text-field&gt;
+        &lt;!-- Поле для ввода пароля --&gt;
+        &lt;v-text-field
+          v-model=&quot;form.password&quot;
+          label=&quot;Пароль&quot;
+          type=&quot;password&quot;
+          required
+        &gt;&lt;/v-text-field&gt;
+        &lt;!-- Поле для повторного ввода пароля --&gt;
+        &lt;v-text-field
+          v-model=&quot;form.password2&quot;
+          label=&quot;Повтор пароля&quot;
+          type=&quot;password&quot;
+          required
+        &gt;&lt;/v-text-field&gt;
+        &lt;!-- Кнопка для отправки формы регистрации --&gt;
+        &lt;v-btn variant=&quot;elevated&quot; color=&quot;primary&quot; type=&quot;submit&quot; class=&quot;mr-1&quot;&gt;
+          Зарегистрироваться
+        &lt;/v-btn&gt;
+        &lt;!-- Кнопка для возврата на предыдущую страницу --&gt;
+        &lt;v-btn variant=&quot;outlined&quot; color=&quot;error&quot; @click=&quot;$router.push('/start')&quot; class=&quot;ml-1&quot;&gt;
+          Назад
+        &lt;/v-btn&gt;
+      &lt;/v-form&gt;
+    &lt;/v-card&gt;
+  &lt;/v-container&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import axios from 'axios'
+
+export default {
+  name: 'Register',
+  data() {
+    return {
+      form: {
+        username: '',
+        email: '',
+        password: '',
+        password2: ''
+      }
+    }
+  },
+  methods: {
+    async handleRegister() {
+      try {
+        // Отправка данных формы на сервер для регистрации пользователя
+        await axios.post('http://127.0.0.1:8000/auth/users/', {
+          username: this.form.username,
+          email: this.form.email,
+          password: this.form.password,
+          re_password: this.form.password2
+        })
+        // Переход на страницу логина после успешной регистрации
+        this.$router.push('/login')
+      } catch (error) {
+        console.error(error)
+      }
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<p><strong>Описание:</strong></p>
+<ul>
+<li><strong>Data:</strong></li>
+<li>
+<p><code>form</code>: Объект, содержащий поля <code>username</code>, <code>email</code>, <code>password</code> и <code>password2</code>.</p>
+</li>
+<li>
+<p><strong>Methods:</strong></p>
+</li>
+<li><code>handleRegister</code>: Отправляет POST-запрос на сервер с данными формы для регистрации. При успешном ответе перенаправляет пользователя на страницу входа.</li>
+</ul>
+<hr />
+<h3 id="profilevue">Profile.vue</h3>
+<p>Компонент профиля пользователя, отображающий информацию о текущем пользователе и его бронированиях. Позволяет редактировать профиль и управлять данными клиента.</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;v-container&gt;
+    &lt;h2 class=&quot;mb-4&quot;&gt;Профиль пользователя&lt;/h2&gt;
+
+    &lt;!-- Основная карта с данными пользователя --&gt;
+    &lt;v-card class=&quot;elevated-card pa-4 mb-4&quot;&gt;
+      &lt;v-card-title class=&quot;text-h5&quot;&gt;Информация пользователе&lt;/v-card-title&gt;
+      &lt;v-card-text&gt;
+        &lt;div&gt;&lt;strong&gt;Роль:&lt;/strong&gt; {{ userData.is_staff ? 'Администратор' : 'Пользователь' }}&lt;/div&gt;
+        &lt;div&gt;&lt;strong&gt;Имя пользователя:&lt;/strong&gt; {{ userData.username }}&lt;/div&gt;
+        &lt;div&gt;&lt;strong&gt;Email:&lt;/strong&gt; {{ userData.email }}&lt;/div&gt;
+      &lt;/v-card-text&gt;
+      &lt;v-card-actions class=&quot;d-flex justify-center&quot;&gt;
+        &lt;v-btn variant=&quot;elevated&quot; color=&quot;primary&quot; @click=&quot;editProfile&quot;&gt;Редактировать профиль&lt;/v-btn&gt;
+        &lt;v-btn variant=&quot;outlined&quot; color=&quot;error&quot; @click=&quot;logout&quot;&gt;Выйти&lt;/v-btn&gt;
+      &lt;/v-card-actions&gt;
+    &lt;/v-card&gt;
+
+    &lt;!-- Карточка с данными о клиенте (Client) --&gt;
+    &lt;v-card v-if=&quot;userClientData&quot; class=&quot;elevated-card pa-4 mb-4&quot;&gt;
+      &lt;v-card-title class=&quot;text-h5&quot;&gt;
+        Мои данные
+      &lt;/v-card-title&gt;
+      &lt;v-card-text&gt;
+        &lt;div&gt;
+          &lt;strong&gt;ФИО:&lt;/strong&gt;
+          {{ userClientData.last_name }} {{ userClientData.first_name }} {{ userClientData.middle_name }}
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;strong&gt;Паспорт:&lt;/strong&gt; {{ userClientData.passport_number }}
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;strong&gt;Город:&lt;/strong&gt; {{ userClientData.city_of_origin }}
+        &lt;/div&gt;
+      &lt;/v-card-text&gt;
+      &lt;v-card-actions class=&quot;d-flex justify-center&quot;&gt;
+        &lt;v-btn variant=&quot;elevated&quot; color=&quot;primary&quot; @click=&quot;editClient&quot;&gt;
+          Редактировать данные
+        &lt;/v-btn&gt;
+        &lt;v-btn variant=&quot;outlined&quot; color=&quot;error&quot; @click=&quot;deleteClient&quot;&gt;
+          Удалить данные
+        &lt;/v-btn&gt;
+      &lt;/v-card-actions&gt;
+    &lt;/v-card&gt;
+
+    &lt;!-- Если клиентские данные отсутствуют, показываем кнопку &quot;Добавить&quot; --&gt;
+    &lt;v-card v-else class=&quot;elevated-card pa-4 mb-4&quot;&gt;
+      &lt;v-card-title class=&quot;text-h5&quot;&gt;У вас нет клиентской информации&lt;/v-card-title&gt;
+      &lt;v-card-text&gt;
+        Хотите добавить собственные данные клиента?
+      &lt;/v-card-text&gt;
+      &lt;v-card-actions&gt;
+        &lt;v-btn variant=&quot;elevated&quot; color=&quot;primary&quot; @click=&quot;createClientData&quot;&gt;
+          Добавить данные клиента
+        &lt;/v-btn&gt;
+      &lt;/v-card-actions&gt;
+    &lt;/v-card&gt;
+
+    &lt;!-- Карточка с бронированиями (Stays) --&gt;
+    &lt;v-card class=&quot;elevated-card pa-4 mb-4&quot;&gt;
+      &lt;v-card-title class=&quot;text-h5&quot;&gt;Мои бронирования&lt;/v-card-title&gt;
+      &lt;v-card-text&gt;
+        &lt;div v-if=&quot;userStays.length === 0&quot;&gt;
+          Нет текущих бронирований
+        &lt;/div&gt;
+        &lt;v-row v-else&gt;
+          &lt;v-col
+            v-for=&quot;stay in userStays&quot;
+            :key=&quot;stay.stay_id&quot;
+            cols=&quot;12&quot;
+            md=&quot;6&quot;
+            lg=&quot;4&quot;
+          &gt;
+            &lt;v-card class=&quot;mb-4 elevated-card pa-2&quot;&gt;
+              &lt;v-card-item&gt;
+                &lt;div&gt;
+                  &lt;div class=&quot;text-h6&quot;&gt;
+                    Номер: {{ stay.room?.room_id }} (Этаж: {{ stay.room?.floor }})
+                  &lt;/div&gt;
+                  &lt;div class=&quot;text-subtitle-2 mb-2&quot;&gt;
+                    Дата заезда: {{ stay.check_in_date }}&lt;br/&gt;
+                    Дата выезда: {{ stay.check_out_date }}
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/v-card-item&gt;
+              &lt;v-card-actions&gt;
+                &lt;v-btn variant=&quot;elevated&quot; color=&quot;primary&quot; @click=&quot;editStay(stay)&quot;&gt;
+                  Редактировать
+                &lt;/v-btn&gt;
+                &lt;v-btn variant=&quot;outlined&quot; color=&quot;error&quot; @click=&quot;deleteStay(stay.stay_id)&quot;&gt;
+                  Удалить
+                &lt;/v-btn&gt;
+              &lt;/v-card-actions&gt;
+            &lt;/v-card&gt;
+          &lt;/v-col&gt;
+        &lt;/v-row&gt;
+      &lt;/v-card-text&gt;
+      &lt;v-card-actions&gt;
+        &lt;v-btn variant=&quot;elevated&quot; color=&quot;primary&quot; @click=&quot;createStay&quot;&gt;
+          Добавить бронирование
+        &lt;/v-btn&gt;
+      &lt;/v-card-actions&gt;
+    &lt;/v-card&gt;
+
+    &lt;!-- Диалог редактирования профиля --&gt;
+    &lt;v-dialog v-model=&quot;dialogProfile&quot; max-width=&quot;500px&quot; persistent&gt;
+      &lt;v-card class=&quot;dialog-card pa-6&quot;&gt;
+        &lt;v-card-title class=&quot;dialog-title text-h5&quot;&gt;
+          Редактирование профиля
+        &lt;/v-card-title&gt;
+        &lt;v-divider&gt;&lt;/v-divider&gt;
+        &lt;v-card-text&gt;
+          &lt;v-text-field v-model=&quot;userForm.username&quot; label=&quot;Имя пользователя&quot;&gt;&lt;/v-text-field&gt;
+          &lt;v-text-field v-model=&quot;userForm.email&quot; label=&quot;Email&quot;&gt;&lt;/v-text-field&gt;
+          &lt;v-text-field v-model=&quot;userForm.password&quot; label=&quot;Пароль&quot; type=&quot;password&quot;&gt;&lt;/v-text-field&gt;
+          &lt;v-text-field v-model=&quot;userForm.password2&quot; label=&quot;Повторите пароль&quot; type=&quot;password&quot;&gt;&lt;/v-text-field&gt;
+        &lt;/v-card-text&gt;
+        &lt;v-divider&gt;&lt;/v-divider&gt;
+        &lt;v-card-actions class=&quot;d-flex justify-end&quot;&gt;
+          &lt;v-btn variant=&quot;outlined&quot; color=&quot;primary&quot; class=&quot;mr-2&quot; @click=&quot;saveProfile&quot;&gt;
+            Сохранить
+          &lt;/v-btn&gt;
+          &lt;v-btn variant=&quot;outlined&quot; color=&quot;error&quot; @click=&quot;dialogProfile = false&quot;&gt;
+            Отмена
+          &lt;/v-btn&gt;
+        &lt;/v-card-actions&gt;
+      &lt;/v-card&gt;
+    &lt;/v-dialog&gt;
+
+    &lt;!-- Диалог редактирования/добавления клиента --&gt;
+    &lt;v-dialog v-model=&quot;dialogClient&quot; max-width=&quot;600px&quot; persistent&gt;
+      &lt;v-card class=&quot;dialog-card pa-6&quot;&gt;
+        &lt;v-card-title class=&quot;dialog-title text-h5&quot;&gt;
+          {{ userClientData?.client_id ? 'Редактирование данных клиента' : 'Новые данные клиента' }}
+        &lt;/v-card-title&gt;
+        &lt;v-divider&gt;&lt;/v-divider&gt;
+        &lt;v-card-text&gt;
+          &lt;v-text-field v-model=&quot;clientForm.passport_number&quot; label=&quot;Паспорт&quot;&gt;&lt;/v-text-field&gt;
+          &lt;v-text-field v-model=&quot;clientForm.last_name&quot; label=&quot;Фамилия&quot;&gt;&lt;/v-text-field&gt;
+          &lt;v-text-field v-model=&quot;clientForm.first_name&quot; label=&quot;Имя&quot;&gt;&lt;/v-text-field&gt;
+          &lt;v-text-field v-model=&quot;clientForm.middle_name&quot; label=&quot;Отчество&quot;&gt;&lt;/v-text-field&gt;
+          &lt;v-text-field v-model=&quot;clientForm.city_of_origin&quot; label=&quot;Город&quot;&gt;&lt;/v-text-field&gt;
+        &lt;/v-card-text&gt;
+        &lt;v-divider&gt;&lt;/v-divider&gt;
+        &lt;v-card-actions class=&quot;d-flex justify-end&quot;&gt;
+          &lt;v-btn variant=&quot;outlined&quot; color=&quot;primary&quot; @click=&quot;saveClient&quot;&gt;
+            Сохранить
+          &lt;/v-btn&gt;
+          &lt;v-btn variant=&quot;outlined&quot; color=&quot;error&quot; @click=&quot;dialogClient = false&quot;&gt;
+            Отмена
+          &lt;/v-btn&gt;
+        &lt;/v-card-actions&gt;
+      &lt;/v-card&gt;
+    &lt;/v-dialog&gt;
+
+    &lt;!-- Диалог создания/редактирования бронирования (Stay) --&gt;
+    &lt;v-dialog v-model=&quot;dialogStay&quot; max-width=&quot;600px&quot; persistent&gt;
+      &lt;v-card class=&quot;dialog-card pa-6&quot;&gt;
+        &lt;v-card-title class=&quot;dialog-title text-h5&quot;&gt;
+          {{ stayForm.stay_id ? 'Редактирование бронирования' : 'Новое бронирование' }}
+        &lt;/v-card-title&gt;
+        &lt;v-divider&gt;&lt;/v-divider&gt;
+        &lt;v-card-text&gt;
+          &lt;v-text-field
+            v-if=&quot;clientForm.client_id&quot;
+            :value=&quot;clientForm.client_id&quot;
+            label=&quot;Ваш client_id&quot;
+            disabled
+          /&gt;
+          &lt;v-select
+            v-model=&quot;stayForm.room_id&quot;
+            :items=&quot;availableRooms&quot;
+            item-title=&quot;roomDisplay&quot;
+            item-value=&quot;room_id&quot;
+            :return-object=&quot;false&quot;
+            label=&quot;Номер&quot;
+          /&gt;
+          &lt;v-text-field
+            v-model=&quot;stayForm.check_in_date&quot;
+            label=&quot;Дата заезда (YYYY-MM-DD)&quot;
+          /&gt;
+          &lt;v-text-field
+            v-model=&quot;stayForm.check_out_date&quot;
+            label=&quot;Дата выезда (YYYY-MM-DD)&quot;
+          /&gt;
+        &lt;/v-card-text&gt;
+        &lt;v-card-actions&gt;
+          &lt;v-btn variant=&quot;outlined&quot; color=&quot;primary&quot; @click=&quot;createOrUpdateStay&quot;&gt;
+            Сохранить
+          &lt;/v-btn&gt;
+          &lt;v-btn variant=&quot;outlined&quot; color=&quot;error&quot; @click=&quot;dialogStay = false&quot;&gt;
+            Отмена
+          &lt;/v-btn&gt;
+        &lt;/v-card-actions&gt;
+      &lt;/v-card&gt;
+    &lt;/v-dialog&gt;
+  &lt;/v-container&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import axios from 'axios'
+
+export default {
+  name: 'Profile',
+  data() {
+    return {
+      userData: {},         // данные из /auth/users/me/
+      userClientData: null, // данные клиента, связанные с пользователем
+      userStays: [],        // список бронирований, связанных с пользователем
+      dialogProfile: false,
+      dialogClient: false,
+      dialogStay: false,
+
+      userForm: {
+        username: '',
+        email: '',
+        password: '',
+        password2: ''
+      },
+      clientForm: {
+        client_id: null,
+        passport_number: '',
+        last_name: '',
+        first_name: '',
+        middle_name: '',
+        city_of_origin: ''
+      },
+      stayForm: {
+        stay_id: null,
+        room_id: null,
+        check_in_date: '',
+        check_out_date: ''
+      },
+
+      availableRooms: []
+    }
+  },
+  async created() {
+    await this.fetchUserData()
+    await this.fetchUserClientData()
+    await this.fetchUserStays()
+    await this.fetchRooms()
+  },
+  methods: {
+    // --- [1] Профиль ---
+    async fetchUserData() {
+      const token = localStorage.getItem('token')
+      try {
+        const response = await axios.get('http://127.0.0.1:8000/auth/users/me/', {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.userData = response.data
+      } catch (error) {
+        console.error('Ошибка при загрузке данных пользователя', error)
+      }
+    },
+    editProfile() {
+      this.userForm = {
+        username: this.userData.username,
+        email: this.userData.email,
+        password: '',
+        password2: ''
+      }
+      this.dialogProfile = true
+    },
+    async saveProfile() {
+      const token = localStorage.getItem('token')
+      if (this.userForm.password !== this.userForm.password2) {
+        console.error('Пароли не совпадают')
+        return
+      }
+      try {
+        await axios.put('http://127.0.0.1:8000/auth/users/me/', this.userForm, {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.dialogProfile = false
+        this.fetchUserData()
+      } catch (error) {
+        console.error('Ошибка при обновлении профиля', error)
+      }
+    },
+
+    logout() {
+      localStorage.removeItem('token')
+      this.$router.push('/start')
+    },
+
+    // --- Клиентские данные ---
+    async fetchUserClientData() {
+      const token = localStorage.getItem('token')
+      try {
+        const response = await axios.get('http://127.0.0.1:8000/api/clients/me/', {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.userClientData = response.data
+        this.clientForm = { ...response.data }
+      } catch (error) {
+        console.error('Данные клиента не найдены или не созданы', error)
+      }
+    },
+    createClientData() {
+      this.clientForm = {
+        client_id: null,
+        passport_number: '',
+        last_name: '',
+        first_name: '',
+        middle_name: '',
+        city_of_origin: ''
+      }
+      this.dialogClient = true
+    },
+    editClient() {
+      if (!this.userClientData) return
+      this.clientForm = { ...this.userClientData }
+      this.dialogClient = true
+    },
+    async saveClient() {
+      const token = localStorage.getItem('token')
+      try {
+        if (this.clientForm.client_id) {
+          await axios.put(
+            `http://127.0.0.1:8000/api/clients/${this.clientForm.client_id}/`,
+            this.clientForm,
+            { headers: { Authorization: `Token ${token}` } }
+          )
+        } else {
+          await axios.post('http://127.0.0.1:8000/api/clients/', this.clientForm, {
+            headers: { Authorization: `Token ${token}` }
+          })
+        }
+        this.dialogClient = false
+        this.fetchUserClientData()
+      } catch (error) {
+        console.error('Ошибка при сохранении данных клиента', error)
+      }
+    },
+    async deleteClient() {
+      if (!this.userClientData?.client_id) return
+      const token = localStorage.getItem('token')
+      try {
+        await axios.delete(`http://127.0.0.1:8000/api/clients/${this.userClientData.client_id}/`, {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.userClientData = null
+        this.clientForm = {
+          client_id: null,
+          passport_number: '',
+          last_name: '',
+          first_name: '',
+          middle_name: '',
+          city_of_origin: ''
+        }
+      } catch (error) {
+        console.error('Ошибка при удалении клиента', error)
+      }
+    },
+
+    // --- Бронирования (проживания) ---
+    async fetchUserStays() {
+      const token = localStorage.getItem('token')
+      try {
+        const response = await axios.get('http://127.0.0.1:8000/api/stays/user/', {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.userStays = response.data
+      } catch (error) {
+        console.error('Ошибка при загрузке списка бронирований', error)
+      }
+    },
+    async fetchRooms() {
+      const token = localStorage.getItem('token')
+      try {
+        const res = await axios.get('http://127.0.0.1:8000/api/rooms/', {
+          headers: { Authorization: `Token ${token}` }
+        })
+        // Показываем только свободные номера: is_available === true
+        const allRooms = res.data
+        this.availableRooms = allRooms
+          .filter(r =&gt; r.is_available)
+          .map(room =&gt; ({
+            ...room,
+            roomDisplay: `Номер ${room.room_id}, Этаж ${room.floor}`
+          }))
+      } catch (error) {
+        console.error('Ошибка при загрузке списка номеров', error)
+      }
+    },
+    createStay() {
+      this.stayForm = {
+        stay_id: null,
+        // Если у нас уже есть userClientData, берём его id
+        client_id: this.clientForm.client_id || null,
+        room_id: null,
+        check_in_date: '',
+        check_out_date: ''
+      }
+      this.dialogStay = true
+    },
+    editStay(stay) {
+      this.stayForm = {
+        stay_id: stay.stay_id,
+        client_id: stay.client ? stay.client.client_id : null,
+        room_id: stay.room ? stay.room.room_id : null,
+        check_in_date: stay.check_in_date || '',
+        check_out_date: stay.check_out_date || ''
+      }
+      this.dialogStay = true
+    },
+    async createOrUpdateStay() {
+      const token = localStorage.getItem('token')
+      try {
+        if (this.stayForm.stay_id) {
+          await axios.put(
+            `http://127.0.0.1:8000/api/stays/${this.stayForm.stay_id}/`,
+            this.stayForm,
+            { headers: { Authorization: `Token ${token}` } }
+          )
+        } else {
+          await axios.post(
+            'http://127.0.0.1:8000/api/stays/',
+            this.stayForm,
+            { headers: { Authorization: `Token ${token}` } }
+          )
+        }
+        this.dialogStay = false
+        this.fetchUserStays()
+      } catch (error) {
+        console.error('Ошибка при сохранении бронирования', error)
+      }
+    },
+    async deleteStay(id) {
+      const token = localStorage.getItem('token')
+      try {
+        await axios.delete(`http://127.0.0.1:8000/api/stays/${id}/`, {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.fetchUserStays()
+      } catch (error) {
+        console.error('Ошибка при удалении бронирования', error)
+      }
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<p><strong>Описание:</strong></p>
+<ul>
+<li><strong>Data:</strong></li>
+<li><code>userData</code>: Информация о текущем пользователе.</li>
+<li><code>userClientData</code>: Информация о клиенте, связанном с пользователем.</li>
+<li><code>userStays</code>: Список бронирований пользователя.</li>
+<li><code>dialogProfile</code>, <code>dialogClient</code>, <code>dialogStay</code>: Управление состоянием диалоговых окон.</li>
+<li><code>userForm</code>, <code>clientForm</code>, <code>stayForm</code>: Формы для редактирования профиля, данных клиента и бронирований.</li>
+<li>
+<p><code>availableRooms</code>: Список доступных номеров для бронирования.</p>
+</li>
+<li>
+<p><strong>Created Hook:</strong></p>
+</li>
+<li>
+<p>Загружает данные пользователя, данные клиента, бронирования и список комнат при создании компонента.</p>
+</li>
+<li>
+<p><strong>Methods:</strong></p>
+</li>
+<li>
+<p><strong>Профиль:</strong></p>
+<ul>
+<li><code>fetchUserData</code>: Получает данные текущего пользователя.</li>
+<li><code>editProfile</code>: Открывает диалог для редактирования профиля.</li>
+<li><code>saveProfile</code>: Сохраняет изменения профиля на сервере.</li>
+</ul>
+</li>
+<li>
+<p><strong>Клиентские данные:</strong></p>
+<ul>
+<li><code>fetchUserClientData</code>: Получает данные клиента, связанные с пользователем.</li>
+<li><code>createClientData</code>: Открывает диалог для добавления данных клиента.</li>
+<li><code>editClient</code>: Открывает диалог для редактирования данных клиента.</li>
+<li><code>saveClient</code>: Сохраняет данные клиента на сервере.</li>
+<li><code>deleteClient</code>: Удаляет данные клиента.</li>
+</ul>
+</li>
+<li>
+<p><strong>Бронирования:</strong></p>
+<ul>
+<li><code>fetchUserStays</code>: Получает список бронирований пользователя.</li>
+<li><code>fetchRooms</code>: Получает список доступных номеров.</li>
+<li><code>createStay</code>: Открывает диалог для создания нового бронирования.</li>
+<li><code>editStay</code>: Открывает диалог для редактирования существующего бронирования.</li>
+<li><code>createOrUpdateStay</code>: Создает или обновляет бронирование на сервере.</li>
+<li><code>deleteStay</code>: Удаляет бронирование.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="clientsvue">Clients.vue</h3>
+<p>Компонент управления клиентами. Позволяет просматривать, добавлять, редактировать и удалять клиентов, а также выполнять специальные запросы, такие как подсчет клиентов по городу и поиск пересекающихся проживаний.</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;v-container&gt;
+    &lt;h2 class=&quot;mb-4&quot;&gt;Клиенты&lt;/h2&gt;
+
+    &lt;!-- Кнопка для вызова count_by_city --&gt;
+    &lt;v-card class=&quot;mb-4 pa-2 elevated-card&quot;&gt;
+      &lt;v-card-title class=&quot;text-h6&quot;&gt;Поиск клиентов по городу&lt;/v-card-title&gt;
+      &lt;v-card-text&gt;
+        &lt;v-text-field
+          v-model=&quot;cityParam&quot;
+          label=&quot;Город&quot;
+        &gt;&lt;/v-text-field&gt;
+        &lt;v-btn variant=&quot;outlined&quot; color=&quot;primary&quot; @click=&quot;countByCity&quot;&gt;
+          Посчитать
+        &lt;/v-btn&gt;
+      &lt;/v-card-text&gt;
+      &lt;v-card-subtitle v-if=&quot;cityResult !== null&quot;&gt;
+        Найдено клиентов: {{ cityResult }}
+      &lt;/v-card-subtitle&gt;
+    &lt;/v-card&gt;
+
+    &lt;!-- Кнопка для вызова clients_shared_stay --&gt;
+    &lt;v-card class=&quot;mb-4 pa-2 elevated-card&quot;&gt;
+      &lt;v-card-title class=&quot;text-h6&quot;&gt;Пересекающиеся проживания&lt;/v-card-title&gt;
+      &lt;v-card-text&gt;
+        &lt;v-text-field
+          v-model=&quot;sharedClientId&quot;
+          label=&quot;client_id&quot;
+          type=&quot;number&quot;
+        &gt;&lt;/v-text-field&gt;
+        &lt;v-btn variant=&quot;outlined&quot; color=&quot;primary&quot; @click=&quot;clientsSharedStay&quot;&gt;
+          Посмотреть
+        &lt;/v-btn&gt;
+      &lt;/v-card-text&gt;
+      &lt;v-card-subtitle v-if=&quot;sharedClients.length &gt; 0&quot;&gt;
+        &lt;div class=&quot;mt-2&quot;&gt;
+          &lt;div v-for=&quot;c in sharedClients&quot; :key=&quot;c.client_id&quot;&gt;
+            {{ c.last_name }} {{ c.first_name }} (ID={{ c.client_id }})
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/v-card-subtitle&gt;
+    &lt;/v-card&gt;
+
+    &lt;!-- Кнопка для добавления клиента --&gt;
+    &lt;v-btn
+      variant=&quot;outlined&quot;
+      color=&quot;primary&quot;
+      class=&quot;mb-4&quot;
+      @click=&quot;openCreateDialog&quot;
+    &gt;
+      Добавить клиента
+    &lt;/v-btn&gt;
+
+    &lt;!-- Список клиентов --&gt;
+    &lt;v-row&gt;
+      &lt;v-col
+        v-for=&quot;client in clients&quot;
+        :key=&quot;client.client_id&quot;
+        cols=&quot;12&quot;
+        md=&quot;6&quot;
+        lg=&quot;4&quot;
+      &gt;
+        &lt;v-card class=&quot;elevated-card mb-4 pa-2&quot;&gt;
+          &lt;v-card-item&gt;
+            &lt;div&gt;
+              &lt;div class=&quot;text-h6&quot;&gt;{{ client.last_name }} {{ client.first_name }} {{ client.middle_name }}&lt;/div&gt;
+              &lt;div class=&quot;text-subtitle-2 mb-2&quot;&gt;
+                Паспорт - {{ client.passport_number }}&lt;br&gt;
+                Город - {{ client.city_of_origin }}
+              &lt;/div&gt;
+              &lt;div class=&quot;text-caption&quot;&gt;
+                Clinet ID - {{ client.client_id }}
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/v-card-item&gt;
+          &lt;v-card-actions&gt;
+            &lt;v-btn
+              variant=&quot;outlined&quot;
+              color=&quot;primary&quot;
+              @click=&quot;editClient(client)&quot;
+            &gt;
+              Редактировать
+            &lt;/v-btn&gt;
+            &lt;v-btn
+              variant=&quot;outlined&quot;
+              color=&quot;error&quot;
+              @click=&quot;deleteClient(client.client_id)&quot;
+            &gt;
+              Удалить
+            &lt;/v-btn&gt;
+          &lt;/v-card-actions&gt;
+        &lt;/v-card&gt;
+      &lt;/v-col&gt;
+    &lt;/v-row&gt;
+
+    &lt;!-- Диалог для создания/редактирования клиента --&gt;
+    &lt;v-dialog
+      v-model=&quot;dialog&quot;
+      max-width=&quot;600px&quot;
+      persistent
+    &gt;
+      &lt;v-card class=&quot;dialog-card pa-6&quot;&gt;
+        &lt;v-card-title class=&quot;dialog-title text-h5&quot;&gt;
+          {{ clientForm.client_id ? 'Редактирование клиента' : 'Новый клиент' }}
+        &lt;/v-card-title&gt;
+        &lt;v-card-text&gt;
+          &lt;v-text-field
+            v-model=&quot;clientForm.passport_number&quot;
+            label=&quot;Паспорт&quot;
+          &gt;&lt;/v-text-field&gt;
+          &lt;v-text-field
+            v-model=&quot;clientForm.last_name&quot;
+            label=&quot;Фамилия&quot;
+          &gt;&lt;/v-text-field&gt;
+          &lt;v-text-field
+            v-model=&quot;clientForm.first_name&quot;
+            label=&quot;Имя&quot;
+          &gt;&lt;/v-text-field&gt;
+          &lt;v-text-field
+            v-model=&quot;clientForm.middle_name&quot;
+            label=&quot;Отчество&quot;
+          &gt;&lt;/v-text-field&gt;
+          &lt;v-text-field
+            v-model=&quot;clientForm.city_of_origin&quot;
+            label=&quot;Город&quot;
+          &gt;&lt;/v-text-field&gt;
+        &lt;/v-card-text&gt;
+        &lt;v-card-actions&gt;
+          &lt;v-btn variant=&quot;outlined&quot; color=&quot;primary&quot; @click=&quot;createOrUpdateClient&quot;&gt;
+            Сохранить
+          &lt;/v-btn&gt;
+          &lt;v-btn variant=&quot;outlined&quot; color=&quot;error&quot; @click=&quot;dialog = false&quot;&gt;
+            Отмена
+          &lt;/v-btn&gt;
+        &lt;/v-card-actions&gt;
+      &lt;/v-card&gt;
+    &lt;/v-dialog&gt;
+  &lt;/v-container&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import axios from 'axios'
+
+export default {
+  name: 'Clients',
+  data() {
+    return {
+      clients: [],
+      dialog: false,
+      clientForm: {
+        client_id: null,
+        passport_number: '',
+        last_name: '',
+        first_name: '',
+        middle_name: '',
+        city_of_origin: ''
+      },
+      // Для count_by_city
+      cityParam: '',
+      cityResult: null,
+
+      // Для clients_shared_stay
+      sharedClientId: '',
+      sharedClients: []
+    }
+  },
+  async created() {
+    this.fetchClients()
+  },
+  methods: {
+    // Получение списка клиентов
+    async fetchClients() {
+      const token = localStorage.getItem('token')
+      try {
+        const response = await axios.get('http://127.0.0.1:8000/api/clients/', {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.clients = response.data.results ? response.data.results : response.data
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    // Открытие диалога для создания клиента
+    openCreateDialog() {
+      this.clearForm()
+      this.dialog = true
+    },
+    // Очистка формы клиента
+    clearForm() {
+      this.clientForm = {
+        client_id: null,
+        passport_number: '',
+        last_name: '',
+        first_name: '',
+        middle_name: '',
+        city_of_origin: ''
+      }
+    },
+    // Редактирование клиента
+    editClient(client) {
+      this.clientForm = { ...client }
+      this.dialog = true
+    },
+    // Создание или обновление клиента
+    async createOrUpdateClient() {
+      const token = localStorage.getItem('token')
+      try {
+        if (this.clientForm.client_id) {
+          await axios.put(
+            `http://127.0.0.1:8000/api/clients/${this.clientForm.client_id}/`,
+            this.clientForm,
+            { headers: { Authorization: `Token ${token}` } }
+          )
+        } else {
+          await axios.post(
+            `http://127.0.0.1:8000/api/clients/`,
+            this.clientForm,
+            { headers: { Authorization: `Token ${token}` } }
+          )
+        }
+        this.dialog = false
+        this.fetchClients()
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    // Удаление клиента
+    async deleteClient(clientId) {
+      const token = localStorage.getItem('token')
+      try {
+        await axios.delete(`http://127.0.0.1:8000/api/clients/${clientId}/`, {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.fetchClients()
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    // Подсчет клиентов по городу
+    async countByCity() {
+      const token = localStorage.getItem('token')
+      if (!this.cityParam) return
+      try {
+        const resp = await axios.get(`http://127.0.0.1:8000/api/clients/count_by_city/?city=${this.cityParam}`, {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.cityResult = resp.data.client_count
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    // Получение пересекающихся проживаний
+    async clientsSharedStay() {
+      const token = localStorage.getItem('token')
+      if (!this.sharedClientId) return
+      try {
+        const resp = await axios.get(`http://127.0.0.1:8000/api/clients/clients_shared_stay/?client_id=${this.sharedClientId}`, {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.sharedClients = resp.data
+      } catch (error) {
+        console.error(error)
+      }
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<p><strong>Описание:</strong></p>
+<ul>
+<li><strong>Data:</strong></li>
+<li><code>clients</code>: Список всех клиентов.</li>
+<li><code>dialog</code>: Управление состоянием диалогового окна для добавления/редактирования клиента.</li>
+<li><code>clientForm</code>: Объект формы клиента.</li>
+<li><code>cityParam</code>, <code>cityResult</code>: Параметры и результат для подсчета клиентов по городу.</li>
+<li>
+<p><code>sharedClientId</code>, <code>sharedClients</code>: Параметры и результат для поиска пересекающихся проживаний.</p>
+</li>
+<li>
+<p><strong>Created Hook:</strong></p>
+</li>
+<li>
+<p>Загружает список клиентов при создании компонента.</p>
+</li>
+<li>
+<p><strong>Methods:</strong></p>
+</li>
+<li><code>fetchClients</code>: Получает список клиентов с сервера.</li>
+<li><code>openCreateDialog</code>: Открывает диалоговое окно для добавления нового клиента.</li>
+<li><code>clearForm</code>: Очищает форму клиента.</li>
+<li><code>editClient</code>: Открывает диалоговое окно для редактирования существующего клиента.</li>
+<li><code>createOrUpdateClient</code>: Создает нового клиента или обновляет существующего на сервере.</li>
+<li><code>deleteClient</code>: Удаляет клиента по <code>client_id</code>.</li>
+<li><code>countByCity</code>: Подсчитывает количество клиентов в указанном городе.</li>
+<li><code>clientsSharedStay</code>: Получает список клиентов с пересекающимися проживаниями.</li>
+</ul>
+<hr />
+<h3 id="roomsvue">Rooms.vue</h3>
+<p>Компонент управления номерами. Позволяет просматривать, добавлять, редактировать и удалять номера гостиницы.</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;v-container&gt;
+    &lt;h2 class=&quot;mb-4&quot;&gt;Номера&lt;/h2&gt;
+
+    &lt;!-- Кнопка для добавления нового номера --&gt;
+    &lt;v-btn
+      variant=&quot;outlined&quot;
+      color=&quot;primary&quot;
+      class=&quot;mb-4&quot;
+      @click=&quot;openCreateDialog&quot;
+    &gt;
+      Добавить номер
+    &lt;/v-btn&gt;
+
+    &lt;!-- Список номеров --&gt;
+    &lt;v-row&gt;
+      &lt;v-col
+        v-for=&quot;room in rooms&quot;
+        :key=&quot;room.room_id&quot;
+        cols=&quot;12&quot;
+        md=&quot;6&quot;
+        lg=&quot;4&quot;
+      &gt;
+        &lt;v-card class=&quot;mb-4 elevated-card pa-2&quot;&gt;
+          &lt;v-card-item&gt;
+            &lt;div&gt;
+              &lt;div class=&quot;text-h6&quot;&gt;
+                {{ room.room_type }} - {{ room.is_available ? 'Свободен' : 'Занят' }}
+              &lt;/div&gt;
+              &lt;div class=&quot;text-subtitle-2 mb-2&quot;&gt;
+                Этаж - {{ room.floor }} &lt;br&gt;
+                Стоимость в сутки - {{ room.cost_per_day }} &lt;br&gt;
+                Телефон - {{ room.phone_number }}
+              &lt;/div&gt;
+              &lt;div class=&quot;text-caption&quot;&gt;
+                ID - {{ room.room_id }} 
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/v-card-item&gt;
+          &lt;!-- Действия с номером --&gt;
+          &lt;v-card-actions&gt;
+            &lt;v-btn
+              variant=&quot;outlined&quot;
+              color=&quot;primary&quot;
+              @click=&quot;editRoom(room)&quot;
+            &gt;
+              Редактировать
+            &lt;/v-btn&gt;
+            &lt;v-btn
+              variant=&quot;outlined&quot;
+              color=&quot;error&quot;
+              @click=&quot;deleteRoom(room.room_id)&quot;
+            &gt;
+              Удалить
+            &lt;/v-btn&gt;
+          &lt;/v-card-actions&gt;
+        &lt;/v-card&gt;
+      &lt;/v-col&gt;
+    &lt;/v-row&gt;
+
+    &lt;!-- Диалоговое окно для создания/редактирования номера --&gt;
+    &lt;v-dialog
+      v-model=&quot;dialog&quot;
+      max-width=&quot;600px&quot;
+      persistent
+    &gt;
+      &lt;v-card class=&quot;dialog-card pa-6&quot;&gt;
+        &lt;!-- Заголовок диалога --&gt;
+        &lt;v-card-title class=&quot;my-dialog-title dialog-title&quot;&gt;
+          {{ roomForm.room_id ? 'Редактирование номера' : 'Новый номер' }}
+        &lt;/v-card-title&gt;
+        &lt;v-divider&gt;&lt;/v-divider&gt;
+        &lt;v-card-text&gt;
+          &lt;v-select
+            v-model=&quot;roomForm.room_type&quot;
+            :items=&quot;roomTypes&quot;
+            label=&quot;Тип номера&quot;
+            dense
+          &gt;&lt;/v-select&gt;
+          &lt;v-text-field
+            v-model=&quot;roomForm.cost_per_day&quot;
+            label=&quot;Стоимость в сутки&quot;
+            type=&quot;number&quot;
+            dense
+          &gt;&lt;/v-text-field&gt;
+          &lt;v-text-field
+            v-model=&quot;roomForm.floor&quot;
+            label=&quot;Этаж&quot;
+            type=&quot;number&quot;
+            dense
+          &gt;&lt;/v-text-field&gt;
+          &lt;v-switch
+            v-model=&quot;roomForm.is_available&quot;
+            label=&quot;Свободен?&quot;
+            hide-details
+          &gt;&lt;/v-switch&gt;
+          &lt;v-text-field
+            v-model=&quot;roomForm.phone_number&quot;
+            label=&quot;Телефон номера&quot;
+            dense
+          &gt;&lt;/v-text-field&gt;
+        &lt;/v-card-text&gt;
+        &lt;v-divider&gt;&lt;/v-divider&gt;
+        &lt;!-- Действия в диалоге --&gt;
+        &lt;v-card-actions class=&quot;d-flex justify-end&quot;&gt;
+          &lt;v-btn
+            variant=&quot;outlined&quot;
+            color=&quot;primary&quot;
+            @click=&quot;createOrUpdateRoom&quot;
+            class=&quot;mr-2&quot;
+          &gt;
+            Сохранить
+          &lt;/v-btn&gt;
+          &lt;v-btn
+            variant=&quot;outlined&quot;
+            color=&quot;error&quot;
+            @click=&quot;dialog = false&quot;
+          &gt;
+            Отмена
+          &lt;/v-btn&gt;
+        &lt;/v-card-actions&gt;
+      &lt;/v-card&gt;
+    &lt;/v-dialog&gt;
+  &lt;/v-container&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import axios from 'axios'
+export default {
+  name: 'Rooms',
+  data() {
+    return {
+      rooms: [],
+      dialog: false,
+      roomForm: {
+        room_id: null,
+        room_type: 'SINGLE',
+        cost_per_day: 0,
+        floor: 1,
+        is_available: true,
+        phone_number: ''
+      },
+      roomTypes: ['SINGLE', 'DOUBLE', 'TRIPLE']
+    }
+  },
+  async created() {
+    this.fetchRooms()
+  },
+  methods: {
+    async fetchRooms() {
+      const token = localStorage.getItem('token')
+      try {
+        const res = await axios.get('http://127.0.0.1:8000/api/rooms/', {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.rooms = res.data
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    openCreateDialog() {
+      this.clearForm()
+      this.dialog = true
+    },
+    clearForm() {
+      this.roomForm = {
+        room_id: null,
+        room_type: 'SINGLE',
+        cost_per_day: 0,
+        floor: 1,
+        is_available: true,
+        phone_number: ''
+      }
+    },
+    editRoom(room) {
+      this.roomForm = { ...room }
+      this.dialog = true
+    },
+    // Создание или обновление номера
+    async createOrUpdateRoom() {
+      const token = localStorage.getItem('token')
+      try {
+        if (this.roomForm.room_id) {
+          await axios.put(
+            `http://127.0.0.1:8000/api/rooms/${this.roomForm.room_id}/`,
+            this.roomForm,
+            { headers: { Authorization: `Token ${token}` } }
+          )
+        } else {
+          await axios.post(
+            'http://127.0.0.1:8000/api/rooms/',
+            this.roomForm,
+            { headers: { Authorization: `Token ${token}` } }
+          )
+        }
+        this.dialog = false
+        this.fetchRooms()
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    // Удаление номера по ID
+    async deleteRoom(id) {
+      const token = localStorage.getItem('token')
+      try {
+        await axios.delete(`http://127.0.0.1:8000/api/rooms/${id}/`, {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.fetchRooms()
+      } catch (error) {
+        console.error(error)
+      }
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<p><strong>Описание:</strong></p>
+<ul>
+<li><strong>Data:</strong></li>
+<li><code>rooms</code>: Список всех номеров.</li>
+<li><code>dialog</code>: Управление состоянием диалогового окна для добавления/редактирования номера.</li>
+<li><code>roomForm</code>: Объект формы номера.</li>
+<li>
+<p><code>roomTypes</code>: Типы номеров.</p>
+</li>
+<li>
+<p><strong>Created Hook:</strong></p>
+</li>
+<li>
+<p>Загружает список номеров при создании компонента.</p>
+</li>
+<li>
+<p><strong>Methods:</strong></p>
+</li>
+<li><code>fetchRooms</code>: Получает список номеров с сервера.</li>
+<li><code>openCreateDialog</code>: Открывает диалоговое окно для добавления нового номера.</li>
+<li><code>clearForm</code>: Очищает форму номера.</li>
+<li><code>editRoom</code>: Открывает диалоговое окно для редактирования существующего номера.</li>
+<li><code>createOrUpdateRoom</code>: Создает новый номер или обновляет существующий на сервере.</li>
+<li><code>deleteRoom</code>: Удаляет номер по <code>room_id</code>.</li>
+</ul>
+<hr />
+<h3 id="staysvue">Stays.vue</h3>
+<p>Компонент управления проживаниями. Позволяет пользователям просматривать, добавлять, редактировать и удалять свои бронирования.</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;v-container&gt;
+    &lt;h2 class=&quot;mb-4&quot;&gt;Проживания&lt;/h2&gt;
+    &lt;v-btn
+      variant=&quot;outlined&quot;
+      color=&quot;primary&quot;
+      class=&quot;mb-4&quot;
+      @click=&quot;openCreateDialog&quot;
+    &gt;
+      Добавить проживание
+    &lt;/v-btn&gt;
+
+    &lt;v-row&gt;
+      &lt;v-col
+        v-for=&quot;stay in stays&quot;
+        :key=&quot;stay.stay_id&quot;
+        cols=&quot;12&quot;
+        md=&quot;6&quot;
+        lg=&quot;4&quot;
+      &gt;
+        &lt;v-card class=&quot;mb-4 elevated-card pa-2&quot;&gt;
+          &lt;v-card-item&gt;
+            &lt;div&gt;
+              &lt;div class=&quot;text-h6&quot;&gt;
+                {{ stay.client?.last_name }} {{ stay.client?.first_name }} {{ stay.client?.middle_name }} - Номер {{ stay.room?.room_id }}
+              &lt;/div&gt;
+              &lt;div class=&quot;text-subtitle-2 mb-2&quot;&gt;
+                Дата заезда: {{ stay.check_in_date }}&lt;br/&gt;
+                Дата выезда: {{ stay.check_out_date }}
+              &lt;/div&gt;
+              &lt;div class=&quot;text-caption&quot;&gt;
+                Client ID: {{ stay.stay_id }} &lt;br/&gt;
+                Stay ID - {{ stay.client?.client_id }}
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/v-card-item&gt;
+          &lt;v-card-actions&gt;
+            &lt;v-btn variant=&quot;outlined&quot; color=&quot;primary&quot; @click=&quot;editStay(stay)&quot;&gt;
+              Редактировать
+            &lt;/v-btn&gt;
+            &lt;v-btn variant=&quot;outlined&quot; color=&quot;error&quot; @click=&quot;deleteStay(stay.stay_id)&quot;&gt;
+              Удалить
+            &lt;/v-btn&gt;
+          &lt;/v-card-actions&gt;
+        &lt;/v-card&gt;
+      &lt;/v-col&gt;
+    &lt;/v-row&gt;
+
+    &lt;!-- Диалог --&gt;
+    &lt;v-dialog
+      v-model=&quot;dialog&quot;
+      max-width=&quot;600px&quot;
+      persistent
+    &gt;
+      &lt;v-card class=&quot;dialog-card pa-6&quot;&gt;
+        &lt;v-card-title class=&quot;my-dialog-title dialog-title&quot;&gt;
+          {{ stayForm.stay_id ? 'Редактирование проживания' : 'Новое проживание' }}
+        &lt;/v-card-title&gt;
+        &lt;v-card-text&gt;
+          &lt;v-select
+            v-model=&quot;stayForm.client_id&quot;
+            :items=&quot;availableClients&quot;
+            item-title=&quot;fullName&quot;
+            item-value=&quot;client_id&quot;
+            :return-object=&quot;false&quot;
+            label=&quot;Клиент&quot;
+          /&gt;
+          &lt;v-select
+            v-model=&quot;stayForm.room_id&quot;
+            :items=&quot;availableRooms&quot;
+            item-title=&quot;roomDisplay&quot;
+            item-value=&quot;room_id&quot;
+            :return-object=&quot;false&quot;
+            label=&quot;Номер&quot;
+          /&gt;
+          &lt;v-text-field
+            v-model=&quot;stayForm.check_in_date&quot;
+            label=&quot;Дата заезда (YYYY-MM-DD)&quot;
+          /&gt;
+          &lt;v-text-field
+            v-model=&quot;stayForm.check_out_date&quot;
+            label=&quot;Дата выезда (YYYY-MM-DD)&quot;
+          /&gt;
+        &lt;/v-card-text&gt;
+        &lt;v-card-actions&gt;
+          &lt;v-btn variant=&quot;outlined&quot; color=&quot;primary&quot; @click=&quot;createOrUpdateStay&quot;&gt;
+            Сохранить
+          &lt;/v-btn&gt;
+          &lt;v-btn variant=&quot;outlined&quot; color=&quot;error&quot; @click=&quot;dialog = false&quot;&gt;
+            Отмена
+          &lt;/v-btn&gt;
+        &lt;/v-card-actions&gt;
+      &lt;/v-card&gt;
+    &lt;/v-dialog&gt;
+  &lt;/v-container&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import axios from 'axios'
+
+export default {
+  name: 'Stays',
+  data() {
+    return {
+      stays: [],
+      availableClients: [],
+      availableRooms: [],
+      dialog: false,
+      stayForm: {
+        stay_id: null,
+        client_id: null,
+        room_id: null,
+        check_in_date: '',
+        check_out_date: ''
+      }
+    }
+  },
+  async created() {
+    await this.fetchStays()
+    await this.fetchClients()
+    await this.fetchRooms()
+  },
+  methods: {
+    async fetchStays() {
+      const token = localStorage.getItem('token')
+      try {
+        const res = await axios.get('http://127.0.0.1:8000/api/stays/', {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.stays = res.data
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    async fetchClients() {
+      const token = localStorage.getItem('token')
+      try {
+        const res = await axios.get('http://127.0.0.1:8000/api/clients/', {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.availableClients = res.data.map(client =&gt; ({
+          ...client,
+          fullName: `${client.last_name} ${client.first_name} ${client.middle_name}` || 'NoName'
+        }))
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    async fetchRooms() {
+      const token = localStorage.getItem('token')
+      try {
+        const res = await axios.get('http://127.0.0.1:8000/api/rooms/', {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.availableRooms = res.data.map(room =&gt; ({
+          ...room,
+          roomDisplay: `Room ${room.room_id}`
+        }))
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    openCreateDialog() {
+      this.clearForm()
+      this.dialog = true
+    },
+    clearForm() {
+      this.stayForm = {
+        stay_id: null,
+        client_id: null,
+        room_id: null,
+        check_in_date: '',
+        check_out_date: ''
+      }
+    },
+    editStay(stay) {
+      this.stayForm = {
+        stay_id: stay.stay_id,
+        client_id: stay.client ? stay.client.client_id : null,
+        room_id: stay.room ? stay.room.room_id : null,
+        check_in_date: stay.check_in_date || '',
+        check_out_date: stay.check_out_date || ''
+      }
+      this.dialog = true
+    },
+    // Создание или обновление бронирования
+    async createOrUpdateStay() {
+      const token = localStorage.getItem('token')
+      try {
+        if (this.stayForm.stay_id) {
+          await axios.put(
+            `http://127.0.0.1:8000/api/stays/${this.stayForm.stay_id}/`,
+            this.stayForm,
+            { headers: { Authorization: `Token ${token}` } }
+          )
+        } else {
+          await axios.post(
+            'http://127.0.0.1:8000/api/stays/',
+            this.stayForm,
+            { headers: { Authorization: `Token ${token}` } }
+          )
+        }
+        this.dialog = false
+        this.fetchStays()
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    // Удаление бронирования
+    async deleteStay(id) {
+      const token = localStorage.getItem('token')
+      try {
+        await axios.delete(`http://127.0.0.1:8000/api/stays/${id}/`, {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.fetchStays()
+      } catch (error) {
+        console.error(error)
+      }
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<p><strong>Описание:</strong></p>
+<ul>
+<li><strong>Data:</strong></li>
+<li><code>stays</code>: Список всех бронирований.</li>
+<li><code>availableClients</code>: Список доступных клиентов для выбора при бронировании.</li>
+<li><code>availableRooms</code>: Список доступных номеров для выбора при бронировании.</li>
+<li><code>dialog</code>: Управление состоянием диалогового окна для добавления/редактирования бронирования.</li>
+<li>
+<p><code>stayForm</code>: Объект формы бронирования.</p>
+</li>
+<li>
+<p><strong>Created Hook:</strong></p>
+</li>
+<li>
+<p>Загружает список бронирований, клиентов и номеров при создании компонента.</p>
+</li>
+<li>
+<p><strong>Methods:</strong></p>
+</li>
+<li><code>fetchStays</code>: Получает список бронирований с сервера.</li>
+<li><code>fetchClients</code>: Получает список клиентов с сервера.</li>
+<li><code>fetchRooms</code>: Получает список номеров с сервера.</li>
+<li><code>openCreateDialog</code>: Открывает диалоговое окно для добавления нового бронирования.</li>
+<li><code>clearForm</code>: Очищает форму бронирования.</li>
+<li><code>editStay</code>: Открывает диалоговое окно для редактирования существующего бронирования.</li>
+<li><code>createOrUpdateStay</code>: Создает новое бронирование или обновляет существующее на сервере.</li>
+<li><code>deleteStay</code>: Удаляет бронирование по <code>stay_id</code>.</li>
+</ul>
+<hr />
+<h3 id="cleaningsvue">Cleanings.vue</h3>
+<p>Компонент управления уборками. Позволяет сотрудникам просматривать, добавлять, редактировать и удалять записи об уборках, а также выполнять поиск сотрудников по клиентским номерам и дням недели.</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;v-container&gt;
+    &lt;h2 class=&quot;mb-4&quot;&gt;Уборки (CleaningExecution)&lt;/h2&gt;
+
+    &lt;!-- Карточка для поиска сотрудников, убирающих номер клиента в определенный день недели --&gt;
+    &lt;v-card class=&quot;mb-4 pa-2 elevated-card&quot;&gt;
+      &lt;v-card-title class=&quot;text-h6&quot;&gt;Кто убирал номер клиента в день недели&lt;/v-card-title&gt;
+      &lt;v-card-text&gt;
+        &lt;v-text-field
+          v-model=&quot;cleaningParams.client_id&quot;
+          label=&quot;client_id&quot;
+          type=&quot;number&quot;
+          class=&quot;mb-2&quot;
+        &gt;&lt;/v-text-field&gt;
+        &lt;v-text-field
+          v-model=&quot;cleaningParams.day_of_week&quot;
+          label=&quot;День недели (например, 'понедельник')&quot;
+        &gt;&lt;/v-text-field&gt;
+        &lt;v-btn variant=&quot;outlined&quot; color=&quot;primary&quot; @click=&quot;staffCleanedClientRoom&quot;&gt;
+          Посмотреть
+        &lt;/v-btn&gt;
+      &lt;/v-card-text&gt;
+      &lt;v-card-subtitle v-if=&quot;cleaningResult.length &gt; 0&quot;&gt;
+        &lt;div class=&quot;mt-2&quot;&gt;
+          &lt;div
+            v-for=&quot;st in cleaningResult&quot;
+            :key=&quot;st.staff_id&quot;
+          &gt;
+            {{ st.last_name }} {{ st.first_name }} (ID={{ st.staff_id }})
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/v-card-subtitle&gt;
+    &lt;/v-card&gt;
+
+    &lt;!-- Кнопка для открытия диалога добавления новой уборки --&gt;
+    &lt;v-btn
+      variant=&quot;outlined&quot;
+      color=&quot;primary&quot;
+      class=&quot;mb-4&quot;
+      @click=&quot;openDialog&quot;
+    &gt;
+      Добавить запись об уборке
+    &lt;/v-btn&gt;
+
+    &lt;!-- Список всех уборок --&gt;
+    &lt;v-row&gt;
+      &lt;v-col
+        v-for=&quot;cleaning in cleanings&quot;
+        :key=&quot;cleaning.cleaning_execution_id&quot;
+        cols=&quot;12&quot;
+        md=&quot;6&quot;
+        lg=&quot;4&quot;
+      &gt;
+        &lt;v-card class=&quot;elevated-card mb-4 pa-2&quot;&gt;
+          &lt;v-card-item&gt;
+            &lt;div&gt;
+              &lt;div class=&quot;text-h6&quot;&gt;
+                Этаж - {{ cleaning.floor }} - {{ cleaning.time_and_day_of_week }}
+              &lt;/div&gt;
+              &lt;div class=&quot;text-subtitle-2 mb-2&quot;&gt;
+                Сотрудник - {{ cleaning.staff?.last_name }} {{ cleaning.staff?.first_name }} {{ cleaning.staff?.middle_name }} &lt;br&gt;
+                Комната - {{ cleaning.room?.room_id }}
+              &lt;/div&gt;
+              &lt;div class=&quot;text-caption&quot;&gt;
+                Execution ID - {{ cleaning.cleaning_execution_id }} &lt;br&gt;
+                Schedule ID - {{ cleaning.cleaning_schedule?.cleaning_schedule_id }}
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/v-card-item&gt;
+          &lt;v-card-actions&gt;
+            &lt;v-btn
+              variant=&quot;outlined&quot;
+              color=&quot;primary&quot;
+              @click=&quot;editCleaning(cleaning)&quot;
+            &gt;
+              Редактировать
+            &lt;/v-btn&gt;
+            &lt;v-btn
+              variant=&quot;outlined&quot;
+              color=&quot;error&quot;
+              @click=&quot;deleteCleaning(cleaning.cleaning_execution_id)&quot;
+            &gt;
+              Удалить
+            &lt;/v-btn&gt;
+          &lt;/v-card-actions&gt;
+        &lt;/v-card&gt;
+      &lt;/v-col&gt;
+    &lt;/v-row&gt;
+
+    &lt;!-- Диалог для добавления/редактирования уборки --&gt;
+    &lt;v-dialog
+      v-model=&quot;dialog&quot;
+      max-width=&quot;600px&quot;
+      persistent
+    &gt;
+      &lt;v-card class=&quot;dialog-card pa-6&quot;&gt;
+        &lt;v-card-title class=&quot;text-h5&quot; style=&quot;color: #1867C0;&quot;&gt;
+          {{ cleaningForm.cleaning_execution_id ? 'Редактирование' : 'Новая' }} уборка
+        &lt;/v-card-title&gt;
+        &lt;v-card-text&gt;
+          &lt;v-select
+            v-model=&quot;cleaningForm.cleaning_schedule_id&quot;
+            :items=&quot;scheduleList&quot;
+            item-title=&quot;cleaningSchedule&quot;
+            item-value=&quot;cleaning_schedule_id&quot;
+            :return-object=&quot;false&quot;
+            label=&quot;Cleaning Schedule ID&quot;
+          /&gt;
+          &lt;v-select
+            v-model=&quot;cleaningForm.staff_id&quot;
+            :items=&quot;staffList&quot;
+            item-title=&quot;fullName&quot;
+            item-value=&quot;staff_id&quot;
+            :return-object=&quot;false&quot;
+            label=&quot;Сотрудник&quot;
+          /&gt;
+          &lt;v-select
+            v-model=&quot;cleaningForm.room_id&quot;
+            :items=&quot;roomsList&quot;
+            item-title=&quot;roomDisplay&quot;
+            item-value=&quot;room_id&quot;
+            label=&quot;Комната&quot;
+            :return-object=&quot;false&quot;
+            :allow-empty=&quot;true&quot;
+          /&gt;
+          &lt;v-text-field
+            v-model=&quot;cleaningForm.floor&quot;
+            label=&quot;Этаж&quot;
+            type=&quot;number&quot;
+          /&gt;
+          &lt;v-text-field
+            v-model=&quot;cleaningForm.time_and_day_of_week&quot;
+            label=&quot;День/время&quot;
+          /&gt;
+        &lt;/v-card-text&gt;
+        &lt;v-card-actions&gt;
+          &lt;v-btn variant=&quot;outlined&quot; color=&quot;primary&quot; @click=&quot;createOrUpdateCleaning&quot;&gt;
+            Сохранить
+          &lt;/v-btn&gt;
+          &lt;v-btn variant=&quot;outlined&quot; color=&quot;error&quot; @click=&quot;dialog = false&quot;&gt;
+            Отмена
+          &lt;/v-btn&gt;
+        &lt;/v-card-actions&gt;
+      &lt;/v-card&gt;
+    &lt;/v-dialog&gt;
+  &lt;/v-container&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import axios from 'axios'
+
+export default {
+  name: 'Cleanings',
+  data() {
+    return {
+      cleanings: [],
+      dialog: false,
+      cleaningForm: {
+        cleaning_execution_id: null,
+        cleaning_schedule_id: null, 
+        staff_id: null,
+        room_id: null,
+        floor: 1,
+        time_and_day_of_week: ''
+      },
+      scheduleList: [],
+      staffList: [],
+      roomsList: [],
+
+      cleaningParams: {
+        client_id: '',
+        day_of_week: ''
+      },
+      cleaningResult: []
+    }
+  },
+  async created() {
+    await this.fetchCleanings()
+    await this.fetchStaff()
+    await this.fetchRooms()
+    await this.fetchSchedules()
+  },
+  methods: {
+    // Получение списка всех уборок
+    async fetchCleanings() {
+      const token = localStorage.getItem('token')
+      try {
+        const res = await axios.get(`http://127.0.0.1:8000/api/cleaning-executions/`, {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.cleanings = res.data.results ? res.data.results : res.data
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    // Получение списка расписаний уборок
+    async fetchSchedules() {
+      const token = localStorage.getItem('token')
+      try {
+        const resp = await axios.get('http://127.0.0.1:8000/api/cleaning-schedules/', {
+          headers: { Authorization: `Token ${token}` }        
+        })
+        this.scheduleList = resp.data.map(item =&gt; ({
+          ...item,
+          cleaningSchedule: `${item.cleaning_schedule_id}`,
+        }))
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    // Получение списка сотрудников
+    async fetchStaff() {
+      const token = localStorage.getItem('token')
+      try {
+        const res = await axios.get('http://127.0.0.1:8000/api/staff/', {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.staffList = res.data.map(stuff =&gt; ({
+          ...stuff,
+          fullName: `${stuff.last_name} ${stuff.first_name} ${stuff.middle_name}` || 'NoName'
+        }))
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    // Получение списка комнат
+    async fetchRooms() {
+      const token = localStorage.getItem('token')
+      try {
+        const res = await axios.get('http://127.0.0.1:8000/api/rooms/', {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.roomsList = res.data.map(room =&gt; ({
+          ...room,
+          roomDisplay: `Room ${room.room_id}`
+        }))
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    // Открытие диалога для добавления новой уборки
+    openDialog() {
+      this.cleaningForm = {
+        cleaning_execution_id: null,
+        cleaning_schedule_id: null,
+        staff_id: null,
+        room_id: null,
+        floor: 1,
+        time_and_day_of_week: ''
+      }
+      this.dialog = true
+    },
+    // Открытие диалога для редактирования уборки
+    editCleaning(item) {
+      this.cleaningForm = {
+        cleaning_execution_id: item.cleaning_execution_id,
+        cleaning_schedule_id: item.cleaning_schedule?.cleaning_schedule_id || null,
+        staff_id: item.staff?.staff_id || null,
+        room_id: item.room?.room_id || null,
+        floor: item.floor,
+        time_and_day_of_week: item.time_and_day_of_week
+      }
+      this.dialog = true
+    },
+    // Создание или обновление уборки
+    async createOrUpdateCleaning() {
+      const token = localStorage.getItem('token')
+      try {
+        if (this.cleaningForm.cleaning_execution_id) {
+          await axios.put(
+            `http://127.0.0.1:8000/api/cleaning-executions/${this.cleaningForm.cleaning_execution_id}/`,
+            this.cleaningForm,
+            { headers: { Authorization: `Token ${token}` } }
+          )
+        } else {
+          await axios.post(
+            'http://127.0.0.1:8000/api/cleaning-executions/',
+            this.cleaningForm,
+            { headers: { Authorization: `Token ${token}` } }
+          )
+        }
+        this.dialog = false
+        this.fetchCleanings()
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    // Удаление уборки
+    async deleteCleaning(id) {
+      const token = localStorage.getItem('token')
+      try {
+        await axios.delete(`http://127.0.0.1:8000/api/cleaning-executions/${id}/`, {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.fetchCleanings()
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    // Поиск сотрудников, убирающих номер клиента в определенный день недели
+    async staffCleanedClientRoom() {
+      const token = localStorage.getItem('token')
+      const { client_id, day_of_week } = this.cleaningParams
+      if (!client_id || !day_of_week) return
+      try {
+        const resp = await axios.get(
+          `http://127.0.0.1:8000/api/cleaning-executions/staff_cleaned_client_room/?client_id=${client_id}&amp;day_of_week=${day_of_week}`,
+          { headers: { Authorization: `Token ${token}` } }
+        )
+        this.cleaningResult = resp.data
+      } catch (error) {
+        console.error(error)
+      }
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<p><strong>Описание:</strong></p>
+<ul>
+<li><strong>Data:</strong></li>
+<li><code>cleanings</code>: Список всех уборок.</li>
+<li><code>dialog</code>: Управление состоянием диалогового окна для добавления/редактирования уборки.</li>
+<li><code>cleaningForm</code>: Объект формы уборки.</li>
+<li><code>scheduleList</code>, <code>staffList</code>, <code>roomsList</code>: Списки расписаний, сотрудников и комнат для выбора в формах.</li>
+<li>
+<p><code>cleaningParams</code>, <code>cleaningResult</code>: Параметры и результат для поиска сотрудников по клиентскому номеру и дню недели.</p>
+</li>
+<li>
+<p><strong>Created Hook:</strong></p>
+</li>
+<li>
+<p>Загружает список уборок, сотрудников, комнат и расписаний при создании компонента.</p>
+</li>
+<li>
+<p><strong>Methods:</strong></p>
+</li>
+<li><code>fetchCleanings</code>: Получает список уборок с сервера.</li>
+<li><code>fetchSchedules</code>: Получает список расписаний уборок с сервера.</li>
+<li><code>fetchStaff</code>: Получает список сотрудников с сервера.</li>
+<li><code>fetchRooms</code>: Получает список комнат с сервера.</li>
+<li><code>openDialog</code>: Открывает диалоговое окно для добавления новой уборки.</li>
+<li><code>editCleaning</code>: Открывает диалоговое окно для редактирования существующей уборки.</li>
+<li><code>createOrUpdateCleaning</code>: Создает новую уборку или обновляет существующую на сервере.</li>
+<li><code>deleteCleaning</code>: Удаляет уборку по <code>cleaning_execution_id</code>.</li>
+<li><code>staffCleanedClientRoom</code>: Выполняет поиск сотрудников, убирающих номер клиента в определенный день недели.</li>
+</ul>
+<hr />
+<h3 id="schedulesvue">Schedules.vue</h3>
+<p>Компонент управления расписаниями уборок. Позволяет просматривать, добавлять, редактировать и удалять расписания уборок.</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;v-container&gt;
+    &lt;h2 class=&quot;mb-4&quot;&gt;Расписания уборок&lt;/h2&gt;
+
+    &lt;!-- Кнопка для добавления нового расписания --&gt;
+    &lt;v-btn
+      variant=&quot;outlined&quot;
+      color=&quot;primary&quot;
+      class=&quot;mb-4&quot;
+      @click=&quot;openDialog&quot;
+    &gt;
+      Добавить расписание
+    &lt;/v-btn&gt;
+
+    &lt;!-- Список расписаний --&gt;
+    &lt;v-row&gt;
+      &lt;v-col
+        v-for=&quot;schedule in schedules&quot;
+        :key=&quot;schedule.cleaning_schedule_id&quot;
+        cols=&quot;12&quot;
+        md=&quot;6&quot;
+        lg=&quot;4&quot;
+      &gt;
+        &lt;v-card class=&quot;mb-4 elevated-card pa-2&quot;&gt;
+          &lt;v-card-item&gt;
+            &lt;div&gt;
+              &lt;div class=&quot;text-h6&quot;&gt;
+                Этаж: {{ schedule.floor }} - {{ schedule.time_and_day_of_week }}
+              &lt;/div&gt;
+              &lt;div class=&quot;text-subtitle-2 mb-2&quot;&gt;
+                Комната: {{ schedule.room?.room_id }} &lt;br&gt;
+                Сотрудник: {{ schedule.staff?.last_name }} {{ schedule.staff?.first_name }} {{ schedule.staff?.middle_name }}
+              &lt;/div&gt;
+              &lt;div class=&quot;text-caption&quot;&gt;
+                ID: {{ schedule.cleaning_schedule_id }}
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/v-card-item&gt;
+
+          &lt;!-- Действия с расписанием --&gt;
+          &lt;v-card-actions&gt;
+            &lt;v-btn
+              variant=&quot;outlined&quot;
+              color=&quot;primary&quot;
+              @click=&quot;editSchedule(schedule)&quot;
+            &gt;
+              Редактировать
+            &lt;/v-btn&gt;
+            &lt;v-btn
+              variant=&quot;outlined&quot;
+              color=&quot;error&quot;
+              @click=&quot;deleteSchedule(schedule.cleaning_schedule_id)&quot;
+            &gt;
+              Удалить
+            &lt;/v-btn&gt;
+          &lt;/v-card-actions&gt;
+        &lt;/v-card&gt;
+      &lt;/v-col&gt;
+    &lt;/v-row&gt;
+
+    &lt;!-- Диалоговое окно для создания или редактирования расписания --&gt;
+    &lt;v-dialog
+      v-model=&quot;dialog&quot;
+      max-width=&quot;600px&quot;
+      persistent
+      &gt;
+      &lt;v-card class=&quot;dialog-card pa-6&quot;&gt;
+        &lt;v-card-title class=&quot;my-dialog-title dialog-title&quot;&gt;
+          {{ scheduleForm.cleaning_schedule_id ? 'Редактирование' : 'Новое' }} расписание
+        &lt;/v-card-title&gt;
+        &lt;v-card-text&gt;
+          &lt;v-select
+            v-model=&quot;scheduleForm.staff_id&quot;
+            :items=&quot;staffList&quot;
+            item-title=&quot;fullName&quot;
+            item-value=&quot;staff_id&quot;
+            :return-object=&quot;false&quot;
+            label=&quot;Сотрудник&quot;
+          /&gt;
+          &lt;v-select
+            v-model=&quot;scheduleForm.room_id&quot;
+            :items=&quot;roomsList&quot;
+            item-title=&quot;roomDisplay&quot;
+            item-value=&quot;room_id&quot;
+            :return-object=&quot;false&quot;
+            label=&quot;Комната&quot;
+            :allow-empty=&quot;true&quot;
+          /&gt;
+          &lt;v-text-field
+            v-model=&quot;scheduleForm.floor&quot;
+            label=&quot;Этаж&quot;
+            type=&quot;number&quot;
+          /&gt;
+          &lt;v-text-field
+            v-model=&quot;scheduleForm.time_and_day_of_week&quot;
+            label=&quot;День/время&quot;
+          /&gt;
+        &lt;/v-card-text&gt;
+        &lt;v-card-actions&gt;
+          &lt;v-btn variant=&quot;outlined&quot; color=&quot;primary&quot; @click=&quot;createOrUpdateSchedule&quot;&gt;
+            Сохранить
+          &lt;/v-btn&gt;
+          &lt;v-btn variant=&quot;outlined&quot; color=&quot;error&quot; @click=&quot;dialog = false&quot;&gt;
+            Отмена
+          &lt;/v-btn&gt;
+        &lt;/v-card-actions&gt;
+      &lt;/v-card&gt;
+    &lt;/v-dialog&gt;
+  &lt;/v-container&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import axios from 'axios'
+export default {
+  name: 'Schedules',
+  data() {
+    return {
+      schedules: [],
+      dialog: false,
+      scheduleForm: {
+        cleaning_schedule_id: null,
+        staff_id: null,
+        room_id: null,
+        floor: 1,
+        time_and_day_of_week: ''
+      },
+      staffList: [],
+      roomsList: []
+    }
+  },
+  async created() {
+    await this.fetchSchedules()
+    await this.fetchStaff()
+    await this.fetchRooms()
+  },
+  methods: {
+    // Получение списка расписаний
+    async fetchSchedules() {
+      const token = localStorage.getItem('token')
+      try {
+        const res = await axios.get('http://127.0.0.1:8000/api/cleaning-schedules/', {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.schedules = res.data
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    // Получение списка сотрудников
+    async fetchStaff() {
+      const token = localStorage.getItem('token')
+      try {
+        const res = await axios.get('http://127.0.0.1:8000/api/staff/', {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.staffList = res.data.map(stuff =&gt; ({
+          ...stuff,
+          fullName: `${stuff.last_name} ${stuff.first_name} ${stuff.middle_name}` || 'NoName'
+        }))
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    // Получение списка комнат
+    async fetchRooms() {
+      const token = localStorage.getItem('token')
+      try {
+        const res = await axios.get('http://127.0.0.1:8000/api/rooms/', {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.roomsList = res.data.map(room =&gt; ({
+          ...room,
+          roomDisplay: `Room ${room.room_id}`
+        }))
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    // Открытие диалогового окна
+    openDialog() {
+      this.scheduleForm = {
+        cleaning_schedule_id: null,
+        staff_id: null,
+        room_id: null,
+        floor: 1,
+        time_and_day_of_week: ''
+      }
+      this.dialog = true
+    },
+    // Редактирование расписания
+    editSchedule(item) {
+      this.scheduleForm = {
+        cleaning_schedule_id: item.cleaning_schedule_id,
+        staff_id: item.staff?.staff_id || null,
+        room_id: item.room?.room_id || null,
+        floor: item.floor,
+        time_and_day_of_week: item.time_and_day_of_week
+      }
+      this.dialog = true
+    },
+    // Создание или обновление расписания
+    async createOrUpdateSchedule() {
+      const token = localStorage.getItem('token')
+      try {
+        if (this.scheduleForm.cleaning_schedule_id) {
+          await axios.put(
+            `http://127.0.0.1:8000/api/cleaning-schedules/${this.scheduleForm.cleaning_schedule_id}/`,
+            this.scheduleForm,
+            { headers: { Authorization: `Token ${token}` } }
+          )
+        } else {
+          await axios.post(
+            'http://127.0.0.1:8000/api/cleaning-schedules/',
+            this.scheduleForm,
+            { headers: { Authorization: `Token ${token}` } }
+          )
+        }
+        this.dialog = false
+        this.fetchSchedules()
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    // Удаление расписания
+    async deleteSchedule(id) {
+      const token = localStorage.getItem('token')
+      try {
+        await axios.delete(`http://127.0.0.1:8000/api/cleaning-schedules/${id}/`, {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.fetchSchedules()
+      } catch (error) {
+        console.error(error)
+      }
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<p><strong>Описание:</strong></p>
+<ul>
+<li><strong>Data:</strong></li>
+<li><code>schedules</code>: Список всех расписаний уборок.</li>
+<li><code>dialog</code>: Управление состоянием диалогового окна для добавления/редактирования расписания.</li>
+<li><code>scheduleForm</code>: Объект формы расписания.</li>
+<li>
+<p><code>staffList</code>, <code>roomsList</code>: Списки сотрудников и комнат для выбора в формах.</p>
+</li>
+<li>
+<p><strong>Created Hook:</strong></p>
+</li>
+<li>
+<p>Загружает список расписаний, сотрудников и комнат при создании компонента.</p>
+</li>
+<li>
+<p><strong>Methods:</strong></p>
+</li>
+<li><code>fetchSchedules</code>: Получает список расписаний с сервера.</li>
+<li><code>fetchStaff</code>: Получает список сотрудников с сервера.</li>
+<li><code>fetchRooms</code>: Получает список комнат с сервера.</li>
+<li><code>openDialog</code>: Открывает диалоговое окно для добавления нового расписания.</li>
+<li><code>editSchedule</code>: Открывает диалоговое окно для редактирования существующего расписания.</li>
+<li><code>createOrUpdateSchedule</code>: Создает новое расписание или обновляет существующее на сервере.</li>
+<li><code>deleteSchedule</code>: Удаляет расписание по <code>cleaning_schedule_id</code>.</li>
+</ul>
+<hr />
+<h3 id="reportvue">Report.vue</h3>
+<p>Компонент для формирования и отображения отчетов по гостинице. Позволяет выбирать квартал и получать различные статистические данные.</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;v-container&gt;
+    &lt;h2 class=&quot;mb-4&quot;&gt;Отчёт по гостинице&lt;/h2&gt;
+    &lt;!-- Карточка для выбора квартала и кнопки формирования отчета --&gt;
+    &lt;v-card variant=&quot;elevated&quot; :elevation=&quot;4&quot; class=&quot;pa-4 mb-4&quot;&gt;
+      &lt;v-select
+        :items=&quot;[1,2,3,4]&quot;
+        v-model=&quot;selectedQuarter&quot;
+        label=&quot;Выберите квартал&quot;
+        variant=&quot;outlined&quot;
+      &gt;&lt;/v-select&gt;
+      &lt;v-btn
+        variant=&quot;outlined&quot;
+        color=&quot;primary&quot;
+        class=&quot;mt-2&quot;
+        @click=&quot;fetchReport&quot;
+      &gt;
+        Сформировать отчёт
+      &lt;/v-btn&gt;
+    &lt;/v-card&gt;
+
+    &lt;!-- Карточка для отображения данных отчета --&gt;
+    &lt;v-card
+      v-if=&quot;reportData&quot;
+      variant=&quot;elevated&quot;
+      class=&quot;pa-4 mb-4&quot;
+      :elevation=&quot;4&quot;
+    &gt;
+      &lt;div class=&quot;mb-2&quot;&gt;
+        &lt;strong&gt;Число клиентов по номерам:&lt;/strong&gt;
+      &lt;/div&gt;
+      &lt;v-list density=&quot;compact&quot; v-for=&quot;item in reportData.stays_per_room&quot; :key=&quot;item.room__room_id&quot;&gt;
+        &lt;v-list-item&gt;
+          Номер {{ item.room__room_id }} — Клиентов: {{ item.client_count }}
+        &lt;/v-list-item&gt;
+      &lt;/v-list&gt;
+
+      &lt;div class=&quot;mb-2 mt-3&quot;&gt;
+        &lt;strong&gt;Количество номеров на этажах:&lt;/strong&gt;
+      &lt;/div&gt;
+      &lt;v-list density=&quot;compact&quot; v-for=&quot;floorInfo in reportData.rooms_per_floor&quot; :key=&quot;floorInfo.floor&quot;&gt;
+        &lt;v-list-item&gt;
+          Этаж: {{ floorInfo.floor }} — Номеров: {{ floorInfo.room_count }}
+        &lt;/v-list-item&gt;
+      &lt;/v-list&gt;
+
+      &lt;div class=&quot;mb-2 mt-3&quot;&gt;
+        &lt;strong&gt;Доход по каждому номеру:&lt;/strong&gt;
+      &lt;/div&gt;
+      &lt;v-list density=&quot;compact&quot; v-for=&quot;roomIncome in reportData.income_per_room&quot; :key=&quot;roomIncome.room_id&quot;&gt;
+        &lt;v-list-item&gt;
+          Номер {{ roomIncome.room_id }} — Доход: {{ roomIncome.total_income }}
+        &lt;/v-list-item&gt;
+      &lt;/v-list&gt;
+
+      &lt;div class=&quot;mt-3&quot;&gt;
+        &lt;strong&gt;Суммарный доход:&lt;/strong&gt; {{ reportData.total_income }}
+      &lt;/div&gt;
+    &lt;/v-card&gt;
+  &lt;/v-container&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import axios from 'axios'
+
+export default {
+  name: 'Report',
+  data() {
+    return {
+      selectedQuarter: null, // Выбранный квартал
+      reportData: null // Данные отчета
+    }
+  },
+  methods: {
+    async fetchReport() {
+      if (!this.selectedQuarter) return
+      const token = localStorage.getItem('token')
+      try {
+        const response = await axios.get(
+          `http://127.0.0.1:8000/report/?quarter=${this.selectedQuarter}`, 
+          { headers: { Authorization: `Token ${token}` } }
+        )
+        this.reportData = response.data
+      } catch (error) {
+        console.error(error)
+      }
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<p><strong>Описание:</strong></p>
+<ul>
+<li><strong>Data:</strong></li>
+<li><code>selectedQuarter</code>: Выбранный пользователем квартал для формирования отчета.</li>
+<li>
+<p><code>reportData</code>: Полученные данные отчета.</p>
+</li>
+<li>
+<p><strong>Methods:</strong></p>
+</li>
+<li><code>fetchReport</code>: Отправляет GET-запрос на сервер для получения отчета за выбранный квартал и сохраняет данные в <code>reportData</code>.</li>
+</ul>
+<hr />
+<h3 id="staffvue">Staff.vue</h3>
+<p>Компонент управления сотрудниками. Позволяет просматривать, добавлять, редактировать и удалять сотрудников гостиницы.</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;v-container&gt;
+    &lt;h2 class=&quot;mb-4&quot;&gt;Сотрудники&lt;/h2&gt;
+    &lt;!-- Кнопка для открытия диалога создания сотрудника --&gt;
+    &lt;v-btn
+      variant=&quot;outlined&quot;
+      color=&quot;primary&quot;
+      class=&quot;mb-4&quot;
+      @click=&quot;openCreateDialog&quot;
+    &gt;
+      Нанять сотрудника
+    &lt;/v-btn&gt;
+
+    &lt;v-row&gt;
+      &lt;v-col
+        v-for=&quot;(person, index) in staff&quot;
+        :key=&quot;person.staff_id&quot;
+        cols=&quot;12&quot;
+        md=&quot;6&quot;
+        lg=&quot;4&quot;
+      &gt;
+        &lt;v-card class=&quot;mb-4 elevated-card pa-2&quot;&gt;
+          &lt;v-card-item&gt;
+            &lt;div&gt;
+              &lt;div class=&quot;text-h6&quot;&gt;{{ person.last_name }} {{ person.first_name }} {{ person.middle_name }}&lt;/div&gt;
+              &lt;div class=&quot;text-caption&quot; v-if=&quot;person.middle_name&quot;&gt;
+                ID: {{ person.staff_id }}
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/v-card-item&gt;
+          &lt;v-card-actions&gt;
+            &lt;v-btn
+              variant=&quot;outlined&quot;
+              color=&quot;primary&quot;
+              @click=&quot;editStaff(person)&quot;
+            &gt;
+              Редактировать
+            &lt;/v-btn&gt;
+            &lt;v-btn
+              variant=&quot;outlined&quot;
+              color=&quot;error&quot;
+              @click=&quot;deleteStaff(person.staff_id)&quot;
+            &gt;
+              Удалить
+            &lt;/v-btn&gt;
+          &lt;/v-card-actions&gt;
+        &lt;/v-card&gt;
+      &lt;/v-col&gt;
+    &lt;/v-row&gt;
+
+    &lt;!-- Диалог для редактирования/добавления --&gt;
+    &lt;v-dialog
+      v-model=&quot;dialog&quot;
+      max-width=&quot;600px&quot;
+      persistent
+      &gt;
+      &lt;v-card class=&quot;dialog-card pa-6&quot;&gt;
+        &lt;v-card-title class=&quot;my-dialog-title dialog-title&quot;&gt;
+          {{ staffForm.staff_id ? 'Редактирование' : 'Новый' }} сотрудник
+        &lt;/v-card-title&gt;
+        &lt;v-card-text&gt;
+          &lt;v-text-field v-model=&quot;staffForm.last_name&quot; label=&quot;Фамилия&quot; /&gt;
+          &lt;v-text-field v-model=&quot;staffForm.first_name&quot; label=&quot;Имя&quot; /&gt;
+          &lt;v-text-field v-model=&quot;staffForm.middle_name&quot; label=&quot;Отчество&quot; /&gt;
+        &lt;/v-card-text&gt;
+        &lt;v-card-actions&gt;
+          &lt;v-btn variant=&quot;outlined&quot; color=&quot;primary&quot; @click=&quot;createOrUpdateStaff&quot;&gt;
+            Сохранить
+          &lt;/v-btn&gt;
+          &lt;v-btn variant=&quot;outlined&quot; color=&quot;error&quot; @click=&quot;dialog = false&quot;&gt;
+            Отмена
+          &lt;/v-btn&gt;
+        &lt;/v-card-actions&gt;
+      &lt;/v-card&gt;
+    &lt;/v-dialog&gt;
+  &lt;/v-container&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import axios from 'axios'
+
+export default {
+  name: 'Staff',
+  data() {
+    return {
+      staff: [],
+      dialog: false,
+      staffForm: {
+        staff_id: null,
+        last_name: '',
+        first_name: '',
+        middle_name: ''
+      }
+    }
+  },
+  async created() {
+    this.fetchStaff()
+  },
+  methods: {
+    // Метод для получения списка сотрудников
+    async fetchStaff() {
+      const token = localStorage.getItem('token')
+      try {
+        const res = await axios.get('http://127.0.0.1:8000/api/staff/', {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.staff = res.data
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    // Открытие диалога для создания нового сотрудника
+    openCreateDialog() {
+      this.clearForm()
+      this.dialog = true
+    },
+    // Очистка формы
+    clearForm() {
+      this.staffForm = {
+        staff_id: null,
+        last_name: '',
+        first_name: '',
+        middle_name: ''
+      }
+    },
+    // Открытие диалога для редактирования существующего сотрудника
+    editStaff(person) {
+      this.staffForm = { ...person }
+      this.dialog = true
+    },
+    // Метод для создания или обновления сотрудника
+    async createOrUpdateStaff() {
+      const token = localStorage.getItem('token')
+      try {
+        if (this.staffForm.staff_id) {
+          await axios.put(`http://127.0.0.1:8000/api/staff/${this.staffForm.staff_id}/`, this.staffForm, {
+            headers: { Authorization: `Token ${token}` }
+          })
+        } else {
+          await axios.post('http://127.0.0.1:8000/api/staff/', this.staffForm, {
+            headers: { Authorization: `Token ${token}` }
+          })
+        }
+        this.dialog = false
+        this.fetchStaff()
+      } catch (error) {
+        console.error(error)
+      }
+    },
+    // Метод для удаления сотрудника
+    async deleteStaff(id) {
+      const token = localStorage.getItem('token')
+      try {
+        await axios.delete(`http://127.0.0.1:8000/api/staff/${id}/`, {
+          headers: { Authorization: `Token ${token}` }
+        })
+        this.fetchStaff()
+      } catch (error) {
+        console.error(error)
+      }
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<p><strong>Описание:</strong></p>
+<ul>
+<li><strong>Data:</strong></li>
+<li><code>staff</code>: Список всех сотрудников.</li>
+<li><code>dialog</code>: Управление состоянием диалогового окна для добавления/редактирования сотрудника.</li>
+<li>
+<p><code>staffForm</code>: Объект формы сотрудника.</p>
+</li>
+<li>
+<p><strong>Created Hook:</strong></p>
+</li>
+<li>
+<p>Загружает список сотрудников при создании компонента.</p>
+</li>
+<li>
+<p><strong>Methods:</strong></p>
+</li>
+<li><code>fetchStaff</code>: Получает список сотрудников с сервера.</li>
+<li><code>openCreateDialog</code>: Открывает диалоговое окно для добавления нового сотрудника.</li>
+<li><code>clearForm</code>: Очищает форму сотрудника.</li>
+<li><code>editStaff</code>: Открывает диалоговое окно для редактирования существующего сотрудника.</li>
+<li><code>createOrUpdateStaff</code>: Создает нового сотрудника или обновляет существующего на сервере.</li>
+<li><code>deleteStaff</code>: Удаляет сотрудника по <code>staff_id</code>.</li>
+</ul>
+<hr />
+<h3 id="startvue">Start.vue</h3>
+<p>Стартовая страница приложения, предлагающая пользователю выбрать между входом в систему и регистрацией.</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;v-container class=&quot;d-flex align-center justify-center fill-height&quot;&gt;
+    &lt;v-card class=&quot;pa-5 elevated-card&quot; width=&quot;400&quot;&gt;
+      &lt;h2 class=&quot;text-center mb-4&quot;&gt;Добро пожаловать&lt;/h2&gt;
+      &lt;p class=&quot;text-center&quot;&gt;
+        Пожалуйста, выберите, что вы хотите сделать:
+      &lt;/p&gt;
+      &lt;v-btn
+        variant=&quot;elevated&quot;
+        color=&quot;primary&quot;
+        class=&quot;mb-2&quot;
+        block
+        @click=&quot;goToLogin&quot;
+      &gt;
+        Войти
+      &lt;/v-btn&gt;
+      &lt;v-btn
+        variant=&quot;flat&quot;
+        color=&quot;warning&quot;
+        block
+        @click=&quot;goToRegister&quot;
+      &gt;
+        Зарегистрироваться
+      &lt;/v-btn&gt;
+    &lt;/v-card&gt;
+  &lt;/v-container&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: 'Start',
+  methods: {
+    goToLogin() {
+      this.$router.push('/login')
+    },
+    goToRegister() {
+      this.$router.push('/register')
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<p><strong>Описание:</strong></p>
+<ul>
+<li>Простой интерфейс, предлагающий пользователю выбрать между входом в систему и регистрацией.</li>
+<li>Кнопки <code>Войти</code> и <code>Зарегистрироваться</code> перенаправляют пользователя на соответствующие страницы.</li>
+</ul>
+<hr />
+<h2 id="routing">Routing</h2>
+<p>Маршрутизация настроена с использованием <code>vue-router</code>. Определены маршруты для всех основных страниц приложения.</p>
+<pre><code class="language-javascript">// router.js
+import { createRouter, createWebHistory } from 'vue-router'
+
+import Start from '@/views/Start.vue'
+import Home from '@/views/Home.vue'
+import Login from '@/views/Login.vue'
+import Register from '@/views/Register.vue'
+import Profile from '@/views/Profile.vue'
+import Clients from '@/views/Clients.vue'
+import Staff from '@/views/Staff.vue'
+import Rooms from '@/views/Rooms.vue'
+import Stays from '@/views/Stays.vue'
+import Cleanings from '@/views/Cleanings.vue'
+import Schedules from '@/views/Schedules.vue'
+import Report from '@/views/Report.vue'
+
+const routes = [
+  { path: '/', name: 'home', component: Home },
+  { path: '/start', name: 'start', component: Start },
+  { path: '/login', name: 'login', component: Login },
+  { path: '/register', name: 'register', component: Register },
+  { path: '/profile', name: 'profile', component: Profile },
+  { path: '/clients', name: 'clients', component: Clients },
+  { path: '/staff', name: 'staff', component: Staff },
+  { path: '/rooms', name: 'rooms', component: Rooms },
+  { path: '/stays', name: 'stays', component: Stays },
+  { path: '/cleanings', name: 'cleanings', component: Cleanings },
+  { path: '/schedules', name: 'schedules', component: Schedules },
+  { path: '/report', name: 'report', component: Report }
+]
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes
+})
+
+// Перехватчик маршрутов для проверки авторизации
+router.beforeEach((to, from, next) =&gt; {
+  const token = localStorage.getItem('token')
+  // Если пользователь не авторизован и не на /login, /register или /start, перенаправляем на /start
+  if (!token &amp;&amp; to.name !== 'login' &amp;&amp; to.name !== 'register' &amp;&amp; to.name !== 'start') {
+    next('/start')
+  } else {
+    next()
+  }
+})
+
+export default router
+</code></pre>
+<p><strong>Описание:</strong></p>
+<ul>
+<li><strong>Routes:</strong></li>
+<li>
+<p>Определены маршруты для всех основных страниц приложения, таких как <code>Home</code>, <code>Login</code>, <code>Register</code>, <code>Profile</code>, <code>Clients</code>, <code>Staff</code>, <code>Rooms</code>, <code>Stays</code>, <code>Cleanings</code>, <code>Schedules</code>, <code>Report</code> и <code>Start</code>.</p>
+</li>
+<li>
+<p><strong>Перехватчик маршрутов:</strong></p>
+</li>
+<li>Проверяет наличие токена авторизации в <code>localStorage</code>.</li>
+<li>Если токен отсутствует и пользователь пытается перейти на защищенную страницу, перенаправляет его на страницу <code>Start</code>.</li>
+</ul>
+<hr />
+<h2 id="auth">Auth</h2>
+<p>Авторизация реализована с использованием токенов. После успешного входа пользователя получает токен, который сохраняется в <code>localStorage</code>. Этот токен используется для аутентификации последующих запросов к серверу.</p>
+<h3 id="_4">Компоненты авторизации</h3>
+<ul>
+<li><strong>Login.vue</strong>: Отправляет логин и пароль на сервер для получения токена.</li>
+<li><strong>Register.vue</strong>: Позволяет создать новую учетную запись.</li>
+<li><strong>NavigationBar.vue</strong> и <strong>Profile.vue</strong>: Используют токен для получения и отображения информации о пользователе.</li>
+</ul>
+<h3 id="_5">Пример использования токена</h3>
+<p>В каждом компоненте, который взаимодействует с сервером, токен добавляется в заголовки запросов:</p>
+<pre><code class="language-javascript">const token = localStorage.getItem('token')
+const response = await axios.get('http://127.0.0.1:8000/auth/users/me/', {
+  headers: { Authorization: `Token ${token}` }
+})
+</code></pre>
+<hr />
+<h2 id="integration-api">Integration API</h2>
+<p>Приложение взаимодействует с сервером через REST API, предоставляемый Django REST framework. Для выполнения запросов используется библиотека <code>axios</code>.</p>
+<h3 id="_6">Основные эндпоинты</h3>
+<ul>
+<li><strong>Авторизация и регистрация:</strong></li>
+<li><code>POST /auth/token/login/</code>: Вход в систему, получение токена.</li>
+<li><code>POST /auth/users/</code>: Регистрация нового пользователя.</li>
+<li><code>GET /auth/users/me/</code>: Получение информации о текущем пользователе.</li>
+<li>
+<p><code>PUT /auth/users/me/</code>: Обновление информации о текущем пользователе.</p>
+</li>
+<li>
+<p><strong>Клиенты:</strong></p>
+</li>
+<li><code>GET /api/clients/</code>: Получение списка клиентов.</li>
+<li><code>POST /api/clients/</code>: Создание нового клиента.</li>
+<li><code>PUT /api/clients/{client_id}/</code>: Обновление клиента.</li>
+<li><code>DELETE /api/clients/{client_id}/</code>: Удаление клиента.</li>
+<li>
+<p>Дополнительные эндпоинты для специальных запросов:</p>
+<ul>
+<li><code>GET /api/clients/count_by_city/</code>: Подсчет клиентов по городу.</li>
+<li><code>GET /api/clients/clients_shared_stay/</code>: Поиск пересекающихся проживаний.</li>
+</ul>
+</li>
+<li>
+<p><strong>Номера:</strong></p>
+</li>
+<li><code>GET /api/rooms/</code>: Получение списка номеров.</li>
+<li><code>POST /api/rooms/</code>: Создание нового номера.</li>
+<li><code>PUT /api/rooms/{room_id}/</code>: Обновление номера.</li>
+<li>
+<p><code>DELETE /api/rooms/{room_id}/</code>: Удаление номера.</p>
+</li>
+<li>
+<p><strong>Бронирования:</strong></p>
+</li>
+<li><code>GET /api/stays/</code>: Получение списка бронирований.</li>
+<li><code>POST /api/stays/</code>: Создание нового бронирования.</li>
+<li><code>PUT /api/stays/{stay_id}/</code>: Обновление бронирования.</li>
+<li><code>DELETE /api/stays/{stay_id}/</code>: Удаление бронирования.</li>
+<li>
+<p><code>GET /api/stays/user/</code>: Получение бронирований текущего пользователя.</p>
+</li>
+<li>
+<p><strong>Уборки:</strong></p>
+</li>
+<li><code>GET /api/cleaning-executions/</code>: Получение списка уборок.</li>
+<li><code>POST /api/cleaning-executions/</code>: Создание новой уборки.</li>
+<li><code>PUT /api/cleaning-executions/{cleaning_execution_id}/</code>: Обновление уборки.</li>
+<li><code>DELETE /api/cleaning-executions/{cleaning_execution_id}/</code>: Удаление уборки.</li>
+<li>
+<p>Дополнительные эндпоинты для специальных запросов.</p>
+</li>
+<li>
+<p><strong>Расписания уборок:</strong></p>
+</li>
+<li><code>GET /api/cleaning-schedules/</code>: Получение списка расписаний уборок.</li>
+<li><code>POST /api/cleaning-schedules/</code>: Создание нового расписания.</li>
+<li><code>PUT /api/cleaning-schedules/{cleaning_schedule_id}/</code>: Обновление расписания.</li>
+<li>
+<p><code>DELETE /api/cleaning-schedules/{cleaning_schedule_id}/</code>: Удаление расписания.</p>
+</li>
+<li>
+<p><strong>Сотрудники:</strong></p>
+</li>
+<li><code>GET /api/staff/</code>: Получение списка сотрудников.</li>
+<li><code>POST /api/staff/</code>: Создание нового сотрудника.</li>
+<li><code>PUT /api/staff/{staff_id}/</code>: Обновление сотрудника.</li>
+<li>
+<p><code>DELETE /api/staff/{staff_id}/</code>: Удаление сотрудника.</p>
+</li>
+<li>
+<p><strong>Отчеты:</strong></p>
+</li>
+<li><code>GET /report/?quarter={quarter}</code>: Получение отчета за указанный квартал.</li>
+</ul>
+<h3 id="axios">Пример запроса с использованием axios</h3>
+<pre><code class="language-javascript">const token = localStorage.getItem('token')
+try {
+  const response = await axios.get('http://127.0.0.1:8000/api/clients/', {
+    headers: { Authorization: `Token ${token}` }
+  })
+  this.clients = response.data.results ? response.data.results : response.data
+} catch (error) {
+  console.error(error)
+}
+</code></pre>
+<hr />
+<h2 id="vuetify">Vuetify</h2>
+<p>Vuetify — это популярный UI-фреймворк для Vue.js, используемый в данном проекте для создания адаптивных и эстетически приятных интерфейсов.</p>
+<h3 id="vuetify_1">Подключение Vuetify</h3>
+<pre><code class="language-javascript">// main.js
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
+
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+
+// Подключаем глобальные стили
+import '@/assets/hotel-styles.css'
+
+// Тема
+const myHotelTheme = {
+  dark: false,
+  colors: {
+    background: '#FAFAFA',
+    surface: '#FFFFFF',
+    primary: '#4A90E2',
+    'primary-darken-1': '#357ABD',
+    secondary: '#7BDCB5',
+    'secondary-darken-1': '#57C09C',
+    error: '#D32F2F',
+    info: '#2D9CDB',
+    success: '#27AE60',
+    warning: '#CFCFCF',
+  },
+  variables: {
+    'border-color': '#000000',
+    'border-opacity': 0.12,
+  }
+}
+
+const vuetify = createVuetify({
+  components,
+  directives,
+  theme: {
+    defaultTheme: 'myHotelTheme',
+    themes: {
+      myHotelTheme
+    }
+  }
+})
+
+createApp(App)
+  .use(router)
+  .use(vuetify)
+  .mount('#app')
+</code></pre>
+<h3 id="vuetify_2">Использование компонентов Vuetify</h3>
+<p>В каждом компоненте используется различные компоненты Vuetify, такие как <code>v-container</code>, <code>v-card</code>, <code>v-btn</code>, <code>v-text-field</code>, <code>v-dialog</code>, <code>v-select</code>, <code>v-switch</code>, и другие для создания интерфейса.</p>
+<p><strong>Пример использования кнопки Vuetify:</strong></p>
+<pre><code class="language-vue">&lt;v-btn variant=&quot;outlined&quot; color=&quot;primary&quot; @click=&quot;createOrUpdateClient&quot;&gt;
+  Сохранить
+&lt;/v-btn&gt;
+</code></pre>
+<p><strong>Описание:</strong></p>
+<ul>
+<li><code>variant</code>: Определяет стиль кнопки (например, <code>outlined</code>, <code>elevated</code>).</li>
+<li><code>color</code>: Задает цвет кнопки.</li>
+<li><code>@click</code>: Обработчик события клика.</li>
+</ul>
+<hr />
+<pre><code></code></pre>
+<h1 id="api">API</h1>
+<p>Приложение взаимодействует с сервером через REST API, предоставляемый Django REST framework.</p>
+<h2 id="edpoints">Edpoints</h2>
+<ul>
+<li><strong>Клиенты:</strong></li>
+<li><code>GET /api/clients/</code></li>
+<li><code>POST /api/clients/</code></li>
+<li><code>PUT /api/clients/{client_id}/</code></li>
+<li><code>DELETE /api/clients/{client_id}/</code></li>
+<li><code>GET /api/clients/count_by_city/</code></li>
+<li>
+<p><code>GET /api/clients/clients_shared_stay/</code></p>
+</li>
+<li>
+<p><strong>Номера:</strong></p>
+</li>
+<li><code>GET /api/rooms/</code></li>
+<li><code>POST /api/rooms/</code></li>
+<li><code>PUT /api/rooms/{room_id}/</code></li>
+<li>
+<p><code>DELETE /api/rooms/{room_id}/</code></p>
+</li>
+<li>
+<p><strong>Бронирования:</strong></p>
+</li>
+<li><code>GET /api/stays/</code></li>
+<li><code>POST /api/stays/</code></li>
+<li><code>PUT /api/stays/{stay_id}/</code></li>
+<li><code>DELETE /api/stays/{stay_id}/</code></li>
+<li>
+<p><code>GET /api/stays/user/</code></p>
+</li>
+<li>
+<p><strong>Уборки:</strong></p>
+</li>
+<li><code>GET /api/cleaning-executions/</code></li>
+<li><code>POST /api/cleaning-executions/</code></li>
+<li><code>PUT /api/cleaning-executions/{cleaning_execution_id}/</code></li>
+<li>
+<p><code>DELETE /api/cleaning-executions/{cleaning_execution_id}/</code></p>
+</li>
+<li>
+<p><strong>Расписания уборок:</strong></p>
+</li>
+<li><code>GET /api/cleaning-schedules/</code></li>
+<li><code>POST /api/cleaning-schedules/</code></li>
+<li><code>PUT /api/cleaning-schedules/{cleaning_schedule_id}/</code></li>
+<li>
+<p><code>DELETE /api/cleaning-schedules/{cleaning_schedule_id}/</code></p>
+</li>
+<li>
+<p><strong>Сотрудники:</strong></p>
+</li>
+<li><code>GET /api/staff/</code></li>
+<li><code>POST /api/staff/</code></li>
+<li><code>PUT /api/staff/{staff_id}/</code></li>
+<li>
+<p><code>DELETE /api/staff/{staff_id}/</code></p>
+</li>
+<li>
+<p><strong>Отчеты:</strong></p>
+</li>
+<li><code>GET /report/?quarter={quarter}</code></li>
+</ul>
+<h4 id="authenticationmd">authentication.md</h4>
+<h1 id="_7">Авторизация и Аутентификация</h1>
+<p>Авторизация реализована с использованием токенов. После успешного входа пользователя получает токен, который сохраняется в <code>localStorage</code>. Этот токен используется для аутентификации последующих запросов к серверу.</p>
+<h2 id="_8">Процесс авторизации</h2>
+<ol>
+<li><strong>Вход в систему:</strong></li>
+<li>Пользователь вводит логин и пароль на странице <code>Login.vue</code>.</li>
+<li>Отправляется POST-запрос на эндпоинт <code>/auth/token/login/</code>.</li>
+<li>
+<p>Сервер возвращает токен, который сохраняется в <code>localStorage</code>.</p>
+</li>
+<li>
+<p><strong>Регистрация:</strong></p>
+</li>
+<li>Пользователь вводит необходимые данные на странице <code>Register.vue</code>.</li>
+<li>Отправляется POST-запрос на эндпоинт <code>/auth/users/</code>.</li>
+<li>
+<p>При успешной регистрации перенаправляет пользователя на страницу входа.</p>
+</li>
+<li>
+<p><strong>Использование токена:</strong></p>
+</li>
+<li>При каждом запросе к защищенным эндпоинтам токен добавляется в заголовки запросов.</li>
+<li>Если токен отсутствует или недействителен, пользователь перенаправляется на страницу входа.</li>
+</ol>
+<h2 id="_9">Пример использования токена</h2>
+<pre><code class="language-js">const token = localStorage.getItem('token')
+const response = await axios.get('http://127.0.0.1:8000/auth/users/me/', {
+  headers: { Authorization: `Token ${token}` }
+})
+</code></pre>
+<hr />
+<h2 id="vuetify_3">Использование Vuetify</h2>
+<p>Vuetify используется для создания адаптивного и эстетически приятного интерфейса. Все компоненты оформлены с использованием стилей и компонентов Vuetify.</p>
+<h3 id="_10">Настройка темы</h3>
+<p>В файле <code>main.js</code> настроена пользовательская тема:</p>
+<pre><code class="language-js">const myHotelTheme = {
+  dark: false,
+  colors: {
+    background: '#FAFAFA',
+    surface: '#FFFFFF',
+    primary: '#4A90E2',
+    'primary-darken-1': '#357ABD',
+    secondary: '#7BDCB5',
+    'secondary-darken-1': '#57C09C',
+    error: '#D32F2F',
+    info: '#2D9CDB',
+    success: '#27AE60',
+    warning: '#CFCFCF',
+  },
+  variables: {
+    'border-color': '#000000',
+    'border-opacity': 0.12,
+  }
+}
+</code></pre>
+<h3 id="vuetify_4">Пример использования компонента Vuetify</h3>
+<p><strong>Кнопка:</strong></p>
+<pre><code class="language-vue">&lt;v-btn variant=&quot;outlined&quot; color=&quot;primary&quot; @click=&quot;saveProfile&quot;&gt;
+  Сохранить
+&lt;/v-btn&gt;
+</code></pre>
+<p><strong>Описание:</strong></p>
+<ul>
+<li><code>variant</code>: Определяет стиль кнопки (<code>outlined</code>, <code>elevated</code> и т.д.).</li>
+<li><code>color</code>: Задает цвет кнопки.</li>
+<li><code>@click</code>: Обработчик события клика.</li>
+</ul>
+<p><strong>Текстовое поле:</strong></p>
+<pre><code class="language-vue">&lt;v-text-field v-model=&quot;form.username&quot; label=&quot;Логин&quot; required&gt;&lt;/v-text-field&gt;
+</code></pre>
+<p><strong>Описание:</strong></p>
+<ul>
+<li><code>v-model</code>: Двусторонняя привязка данных.</li>
+<li><code>label</code>: Метка поля ввода.</li>
+<li><code>required</code>: Поле обязательно для заполнения.</li>
+</ul>
+<hr />
+<h2 id="_11">Заключение</h2>
+<p>Проект <strong>Hotel System</strong> представляет собой полнофункциональное веб-приложение для управления гостиницей, включающее управление клиентами, сотрудниками, номерами, бронированиями и уборками. Использование Vue.js и Vuetify обеспечивает интуитивно понятный и адаптивный интерфейс, а интеграция с Django REST framework позволяет эффективно взаимодействовать с серверной частью. </p>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    
+    
+</body>
+
+</html>

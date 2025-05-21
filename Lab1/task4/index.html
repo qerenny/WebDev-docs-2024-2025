@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-terminal-4.7.0">
+     
+     
+    <link rel="icon" type="image/png" sizes="192x192" href="../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>Task 4 - just_place</title>
+
+
+<link href="../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../css/normalize.css" rel="stylesheet">
+<link href="../../css/terminal.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../css/theme.footer.css" rel="stylesheet">
+<!-- default color palette -->
+<link href="../../css/palettes/default.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+     
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="/" class="no-style">just_place</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../.." class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Home</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                
+                
+                
+                    
+                    
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+  
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../..">Home</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item--active terminal-mkdocs-side-nav-section-no-index">Semester 1</span>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item--active terminal-mkdocs-side-nav-section-no-index">Lab 1</span>
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../Lab2/Lab2_task/Task/">Lab 2</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Lab 3</span>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../Lab4/lab4/">Lab 4</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../Prac3.1/prac3_1/">Prac 3.1</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Semester 2</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../Lab1_sem2/lab1/">Lab 1</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../Lab2_sem2/lab2/">Lab 2</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../Lab3_sem2/lab3/">Lab 3</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+    </ul>
+  
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#_1">Реализация многопользовательского чата</a></li>
+        <li><a href="#_2">Условие</a></li><li><a href="#_3">Решение</a></li><li><a href="#_7">Код</a></li>
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="_1">Реализация многопользовательского чата</h1>
+<h2 id="_2">Условие</h2>
+<p><strong>Задача</strong>: Реализовать многопользовательский чат, где клиенты могут подключаться к серверу, отправлять сообщения и получать их от других пользователей. Для реализации требуется использование библиотеки <code>socket</code> для сетевых операций и библиотеки <code>threading</code> для работы с потоками.</p>
+<p><strong>Требования</strong>:</p>
+<ol>
+<li>Многопользовательская поддержка (больше двух пользователей).</li>
+<li>Использование потоков для обработки сообщений от разных пользователей.</li>
+<li>Отправка сообщений от одного пользователя всем остальным участникам чата.</li>
+</ol>
+<h2 id="_3">Решение</h2>
+<p>В данной задаче реализован многопользовательский чат с серверной и клиентской частью.</p>
+<ul>
+<li><strong>Серверная часть</strong> отвечает за обработку подключений пользователей, отправку и получение сообщений, а также за рассылку сообщений другим участникам чата. Сервер управляет потоками для каждого пользователя и сохраняет информацию о подключённых клиентах.</li>
+<li><strong>Клиентская часть</strong> позволяет пользователям подключаться к серверу, отправлять и получать сообщения.</li>
+</ul>
+<h3 id="_4">Возможности:</h3>
+<ol>
+<li><strong>Использование библиотеки <code>socket</code></strong>: Все взаимодействие между сервером и клиентами осуществляется с помощью TCP-сокетов, которые позволяют отправлять и получать сообщения в текстовом формате.</li>
+<li><strong>Использование <code>threading</code></strong>: Каждое клиентское соединение на стороне сервера обрабатывается в отдельном потоке, что позволяет обрабатывать сообщения от нескольких клиентов параллельно.</li>
+<li><strong>Многопользовательский режим</strong>: Сервер поддерживает подключение и взаимодействие между несколькими пользователями одновременно. Все подключенные пользователи сохраняются в словаре <code>users</code>, где ключом является имя пользователя, а значением — сокет клиента.</li>
+<li><strong>Персональные сообщения</strong>: Пользователи могут отправлять приватные сообщения другим пользователям, добавив символ <code>@</code> перед именем целевого пользователя.</li>
+</ol>
+<h3 id="_5">Описание работы функций</h3>
+<ol>
+<li><strong>Функция <code>broadcast</code></strong>:</li>
+</ol>
+<blockquote>
+<p>Отвечает за отправку сообщений всем пользователям, за исключением отправителя.
+Если сообщение отправляется конкретному пользователю, то проверяется наличие этого пользователя в системе, и если он подключен, сообщение доставляется только ему.</p>
+</blockquote>
+<ol>
+<li><strong>Функция <code>handle_client</code></strong>:</li>
+</ol>
+<blockquote>
+<p>Управляет взаимодействием с клиентом. После подключения клиента, запрашивается его имя, которое используется для идентификации в чате.
+Функция обрабатывает все входящие сообщения клиента и передает их через <code>broadcast</code> другим пользователям.
+Также поддерживает отправку персональных сообщений через символ <code>@</code>.</p>
+</blockquote>
+<ol>
+<li><strong>Функция <code>start_server</code></strong>:</li>
+</ol>
+<blockquote>
+<p>Основная функция сервера, которая ожидает подключения клиентов и запускает отдельный поток для каждого нового клиента с помощью <code>threading.Thread</code>.</p>
+</blockquote>
+<ol>
+<li><strong>Функция <code>receive_messages</code> (на стороне клиента)</strong>:</li>
+</ol>
+<blockquote>
+<p>Поток на стороне клиента, который принимает входящие сообщения от сервера и выводит их на экран.</p>
+</blockquote>
+<ol>
+<li><strong>Функция <code>start_client</code></strong>:</li>
+</ol>
+<blockquote>
+<p>Основная функция клиента, которая подключается к серверу и запускает поток для приема сообщений, одновременно позволяя пользователю вводить свои собственные сообщения.</p>
+</blockquote>
+<h3 id="_6">Пример работы чата</h3>
+<ol>
+<li><strong>Подключение клиента</strong>:</li>
+</ol>
+<blockquote>
+<p>Клиент подключается к серверу и вводит свое имя. Если имя уже занято, подключение прерывается.
+Если имя уникально, клиент присоединяется к чату, и всем другим пользователям отправляется сообщение о новом участнике.</p>
+</blockquote>
+<ol>
+<li><strong>Отправка сообщений</strong>:</li>
+</ol>
+<blockquote>
+<p>Клиент может отправлять обычные сообщения, которые видят все участники чата, или персональные сообщения, указав <code>@user_name</code> в начале сообщения.</p>
+</blockquote>
+<ol>
+<li><strong>Отключение клиента</strong>:</li>
+</ol>
+<blockquote>
+<p>Если клиент закрывает соединение или происходит ошибка, сервер отключает его и уведомляет остальных участников чата.</p>
+</blockquote>
+<h2 id="_7">Код</h2>
+<p><code>server.py</code></p>
+<pre><code class="language-python">import socket
+import threading
+
+green_s = '\033[32m'
+red_s = '\033[31m'
+green_e = '\033[0m'
+red_e = '\033[0m'
+users = {}
+
+
+def broadcast(message, sender_socket=None, target_user=None):
+    if target_user:
+        target_socket = users.get(target_user)
+        if target_socket:
+            try:
+                target_socket.send(message)
+            except:
+                target_socket.close()
+                del users[target_user]
+                print(f&quot;{red_s}Ошибка при отправке сообщения пользователю {target_user}{red_e}&quot;)
+        else:
+            print(f&quot;{red_s}Пользователь {target_user} не найден{red_e}&quot;)
+            sender_socket.send(f&quot;{red_s}Ошибка: Пользователь {target_user} не найден{red_e}&quot;.encode('utf-8'))
+        return
+
+    for user, client_socket in users.items():
+        if client_socket != sender_socket:
+            try:
+                client_socket.send(message)
+            except:
+                client_socket.close()
+                del users[user]
+
+
+def handle_client(client_socket, client_address):
+    print(f&quot;Новое подключение: {client_address}&quot;)
+
+    client_socket.send(&quot;Введите своё имя: &quot;.encode('utf-8'))
+    user_name = client_socket.recv(1024).decode('utf-8')
+    if user_name in users:
+        client_socket.send(&quot;Имя уже занято, подключение прервано.\n&quot;.encode('utf-8'))
+        client_socket.close()
+        return
+    users[user_name] = client_socket
+
+    broadcast(f&quot;{green_s}{user_name} присоединился к чату.{green_e}&quot;.encode('utf-8'), client_socket)
+
+    while True:
+        try:
+            message = client_socket.recv(1024)
+            if not message:
+                break
+            print(f&quot;{user_name}: {message.decode('utf-8')}&quot;)
+
+            if message.decode('utf-8').startswith(&quot;@&quot;):
+                target_user, personal_message = message.decode('utf-8').split(' ', 1)
+                target_user = target_user[1:]
+                broadcast(
+                    f&quot;{user_name} {green_s}(лично для {target_user}){green_e}: {personal_message}&quot;.encode('utf-8'),
+                    client_socket, target_user=target_user)
+            else:
+                broadcast(f&quot;{user_name}: {message.decode('utf-8')}&quot;.encode('utf-8'), client_socket)
+        except:
+            client_socket.close()
+            del users[user_name]
+            broadcast(f&quot;{red_s}{user_name} покинул чат.{red_e}&quot;.encode('utf-8'))
+            break
+
+
+def start_server():
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server_socket.bind(('127.0.0.1', 1234))
+    server_socket.listen()
+
+    while True:
+        client_socket, client_address = server_socket.accept()
+
+        client_thread = threading.Thread(target=handle_client, args=(client_socket, client_address))
+        client_thread.start()
+
+
+start_server()
+</code></pre>
+<p><code>client*.py</code></p>
+<pre><code class="language-python">import socket
+import threading
+
+
+def receive_messages(client_socket):
+    while True:
+        try:
+            message = client_socket.recv(1024).decode('utf-8')
+            if message:
+                print(message)
+            else:
+                break
+        except:
+            print(&quot;Ошибка&quot;)
+            client_socket.close()
+            break
+
+
+def start_client():
+    client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    client_socket.connect(('127.0.0.1', 1234))
+
+    receive_thread = threading.Thread(target=receive_messages, args=(client_socket,))
+    receive_thread.start()
+
+    while True:
+        message = input()
+        if message.lower() == 'exit':
+            break
+        client_socket.send(message.encode('utf-8'))
+
+    client_socket.close()
+
+
+start_client()
+</code></pre>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    
+    
+</body>
+
+</html>
